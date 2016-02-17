@@ -49,6 +49,7 @@
 
 -(void)dongSomeThing{
     NSLog(@"点我干吗");
+    NSLog(@"再点我");
 }
 
 

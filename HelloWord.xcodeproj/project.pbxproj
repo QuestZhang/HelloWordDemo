@@ -21,6 +21,7 @@
 		8479CAE61C7046FC00BD1C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8479CAE41C7046FC00BD1C6F /* LaunchScreen.storyboard */; };
 		8479CAF11C7046FC00BD1C6F /* HelloWordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8479CAF01C7046FC00BD1C6F /* HelloWordTests.m */; };
 		8479CAFC1C7046FC00BD1C6F /* HelloWordUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8479CAFB1C7046FC00BD1C6F /* HelloWordUITests.m */; };
+		8486D19F1C74790D00AB319A /* NineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486D19E1C74790D00AB319A /* NineController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		8479CAF71C7046FC00BD1C6F /* HelloWordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8479CAFB1C7046FC00BD1C6F /* HelloWordUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWordUITests.m; sourceTree = "<group>"; };
 		8479CAFD1C7046FC00BD1C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8486D19D1C74790D00AB319A /* NineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NineController.h; sourceTree = "<group>"; };
+		8486D19E1C74790D00AB319A /* NineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NineController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,7 @@
 		8479CAD51C7046FC00BD1C6F /* HelloWord */ = {
 			isa = PBXGroup;
 			children = (
+				8486D19C1C74790D00AB319A /* nineG */,
 				842E7C761C732DEB00661515 /* ButtonDemo */,
 				842E7C721C72F16A00661515 /* UIKitDemo */,
 				842E7C6E1C72C86100661515 /* UICalc */,
@@ -206,6 +210,15 @@
 				8479CAFD1C7046FC00BD1C6F /* Info.plist */,
 			);
 			path = HelloWordUITests;
+			sourceTree = "<group>";
+		};
+		8486D19C1C74790D00AB319A /* nineG */ = {
+			isa = PBXGroup;
+			children = (
+				8486D19D1C74790D00AB319A /* NineController.h */,
+				8486D19E1C74790D00AB319A /* NineController.m */,
+			);
+			path = nineG;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8486D19F1C74790D00AB319A /* NineController.m in Sources */,
 				842E7C711C72C86100661515 /* CalcController.m in Sources */,
 				8479CADE1C7046FC00BD1C6F /* ViewController.m in Sources */,
 				8479CADB1C7046FC00BD1C6F /* AppDelegate.m in Sources */,

@@ -39,6 +39,8 @@
             UIView *yellowView = [[UIView alloc] initWithFrame:CGRectMake(yellowX, yellowY, yellowWidth, yellowHeight)];
             [yellowView setBackgroundColor:[UIColor yellowColor]];
             [self.view addSubview:yellowView];
+            
+            NSLog(@"9宫格");
         }
     }
 }

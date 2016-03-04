@@ -10,7 +10,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Mp3ViewController : UIViewController
+#import <AVFoundation/AVFoundation.h>
+
+@interface Mp3ViewController : UIViewController<AVAudioPlayerDelegate>
 
 
 

@@ -2,17 +2,27 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "cba.jpg",
+      "filename" : "bce.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "cba-1.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "cba-2.jpg",
+      "scale" : "3x"
+    },
+    {
+      "idiom" : "iphone",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "iphone",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "iphone",
       "scale" : "3x"
     }
   ],

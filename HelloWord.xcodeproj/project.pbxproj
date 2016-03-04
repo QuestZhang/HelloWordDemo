@@ -43,6 +43,7 @@
 		84A5885F1C89528700E58CF0 /* DetialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A5885D1C89528700E58CF0 /* DetialTableViewCell.m */; };
 		84A588601C89528700E58CF0 /* DetialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A5885E1C89528700E58CF0 /* DetialTableViewCell.xib */; };
 		84A588651C89634600E58CF0 /* Mp3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A588641C89634600E58CF0 /* Mp3ViewController.m */; };
+		84A588681C8997E300E58CF0 /* yese.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84A588671C8997E300E58CF0 /* yese.mp3 */; };
 		84CCF25C1C844D7000B2DDB0 /* TouTiaoDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CCF25A1C844D7000B2DDB0 /* TouTiaoDetailsController.m */; };
 		84CCF25D1C844D7000B2DDB0 /* TouTiaoDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */; };
 		84E904C01C881E3300B42926 /* UMS_shared@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E904BF1C881E3300B42926 /* UMS_shared@2x.png */; };
@@ -133,6 +134,7 @@
 		84A5885E1C89528700E58CF0 /* DetialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetialTableViewCell.xib; sourceTree = "<group>"; };
 		84A588631C89634600E58CF0 /* Mp3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mp3ViewController.h; sourceTree = "<group>"; };
 		84A588641C89634600E58CF0 /* Mp3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mp3ViewController.m; sourceTree = "<group>"; };
+		84A588671C8997E300E58CF0 /* yese.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = yese.mp3; path = ../../../../../../Downloads/yese.mp3; sourceTree = "<group>"; };
 		84CCF2591C844D7000B2DDB0 /* TouTiaoDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouTiaoDetailsController.h; sourceTree = "<group>"; };
 		84CCF25A1C844D7000B2DDB0 /* TouTiaoDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouTiaoDetailsController.m; sourceTree = "<group>"; };
 		84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouTiaoDetailsController.xib; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 		84A588621C89630700E58CF0 /* MP3 */ = {
 			isa = PBXGroup;
 			children = (
+				84A588671C8997E300E58CF0 /* yese.mp3 */,
 			);
 			path = MP3;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				849196741C7FF3D60038BA6E /* NightController.xib in Resources */,
 				849196771C8001E60038BA6E /* night.jpg in Resources */,
 				84E904C51C882E3F00B42926 /* new_review_tabbar.png in Resources */,
+				84A588681C8997E300E58CF0 /* yese.mp3 in Resources */,
 				846053711C7D8FE100308B49 /* UMS_share@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

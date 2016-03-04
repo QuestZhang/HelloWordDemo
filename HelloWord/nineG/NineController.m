@@ -14,9 +14,30 @@
 
 @interface NineController ()
 
+@property(nonatomic,strong )NSArray *dataArray;
+
 @end
 
 @implementation NineController
+
+//懒加载数据,重写getter方法
+-(NSArray*)dataArray{
+
+    if(nil == _dataArray){
+        //1、读取文件路径
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"app.plist" ofType:nil];
+        
+        // 2、读取文件内容到数组
+        _dataArray = [NSArray arrayWithContentsOfFile:path];
+        
+        //取出数组中对应的字典
+        
+        
+    }
+    
+    return _dataArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -92,10 +113,12 @@
              默认、高亮、被选中、被禁用
              */
             
-            downloadButton setBackgroundColor:UI
+            [downloadButton setBackgroundColor:[UIColor redColor]];
             
             //文字
+            [downloadButton setTitle:@"下载" forState:UIControlStateNormal];
             
+            [yellowView addSubview:downloadButton];
         }
     }
 }

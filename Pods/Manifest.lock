@@ -1,0 +1,21 @@
+PODS:
+  - DKNightVersion (1.2):
+    - DKNightVersion/Core (= 1.2)
+    - DKNightVersion/CoreAnimation (= 1.2)
+    - DKNightVersion/UIKit (= 1.2)
+  - DKNightVersion/Core (1.2)
+  - DKNightVersion/CoreAnimation (1.2):
+    - DKNightVersion/Core
+  - DKNightVersion/UIKit (1.2):
+    - DKNightVersion/Core
+  - UMengSocial (5.0)
+
+DEPENDENCIES:
+  - DKNightVersion (~> 1.2)
+  - UMengSocial (~> 5.0)
+
+SPEC CHECKSUMS:
+  DKNightVersion: 7c8cf41002c6dfa8db3ca71274bf1a9aaeaa4ff7
+  UMengSocial: 48b67179c492a8cf7803fbb0438b8f55432e2fc1
+
+COCOAPODS: 0.39.0

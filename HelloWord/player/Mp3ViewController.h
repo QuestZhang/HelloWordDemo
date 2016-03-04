@@ -12,7 +12,9 @@
 
 #import <AVFoundation/AVFoundation.h>
 
-@interface Mp3ViewController : UIViewController<AVAudioPlayerDelegate>
+#import <MediaPlayer/MediaPlayer.h>
+
+@interface Mp3ViewController : UIViewController<AVAudioPlayerDelegate,MPMediaPickerControllerDelegate>
 
 
 

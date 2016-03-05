@@ -13,7 +13,8 @@
 @property(nonatomic,strong) AVAudioPlayer *avAudioPlayer;   //播放器player
 @property(nonatomic,strong) UIProgressView *progressV;      //播放进度
 @property(nonatomic,strong) UISlider *volumeSlider;         //声音控制
-@property(nonatomic,strong) NSTimer *timer;
+@property(nonatomic,strong) UISlider *playSlider;            //播放精度
+@property(nonatomic,strong) NSTimer *timer;                 //播放时间
 
 @property (nonatomic,strong) MPMusicPlayerController *myMusicPlayer;
 
@@ -28,19 +29,19 @@
     // Do any additional setup after loading the view.
     //初始化三个button
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button setFrame:CGRectMake(100, 100, 60, 40)];
+    [button setFrame:CGRectMake(100, 120, 60, 40)];
     [button setTitle:@"Play" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(play) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
     UIButton *button1 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button1 setFrame:CGRectMake(100, CGRectGetMaxY(button.frame)+15.0, 100, 40)];
+    [button1 setFrame:CGRectMake(100, CGRectGetMaxY(button.frame)+10, 100, 40)];
     [button1 setTitle:@"pause" forState:UIControlStateNormal];
     [button1 addTarget:self action:@selector(pause) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button1];
     
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button2 setFrame:CGRectMake(100, CGRectGetMaxY(button1.frame)+15.0, 100, 40)];
+    [button2 setFrame:CGRectMake(100, CGRectGetMaxY(button1.frame)+10, 100, 40)];
     [button2 setTitle:@"stop" forState:UIControlStateNormal];
     [button2 addTarget:self action:@selector(stop) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button2];
@@ -48,25 +49,32 @@
     
     
     UIButton *button3 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button3 setFrame:CGRectMake(100, CGRectGetMaxY(button2.frame)+15.0, 150, 40)];
+    [button3 setFrame:CGRectMake(100, CGRectGetMaxY(button2.frame)+10.0, 150, 40)];
     [button3 setTitle:@"Pick And Play" forState:UIControlStateNormal];
     [button3 addTarget:self action:@selector(pickAndPlay:) forControlEvents:UIControlEventTouchUpInside];
     button3.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:button3];
     
     UIButton *button4 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [button4 setFrame:CGRectMake(100, CGRectGetMaxY(button3.frame)+15.0, 150, 40)];
+    [button4 setFrame:CGRectMake(100, CGRectGetMaxY(button3.frame)+10.0, 150, 40)];
     [button4 setTitle:@"Stop Playing" forState:UIControlStateNormal];
     [button4 addTarget:self action:@selector(stopPlay:) forControlEvents:UIControlEventTouchUpInside];
     button4.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:button4];
     
+    //初始化播放控制
+     _playSlider = [[UISlider alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(button4.frame)+10.0, 200, 20)];
+    [_playSlider addTarget:self action:@selector(progressChange:)
+            forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:_playSlider];
+    
     //从budle路径下读取音频文件　　轻音乐 - 萨克斯回家 这个文件名是你的歌曲名字,mp3是你的音频格式
-    NSString *string = [[NSBundle mainBundle] pathForResource:@"yese" ofType:@"mp3"];
+//    NSString *string = [[NSBundle mainBundle] pathForResource:@"yese" ofType:@"mp3"];
     //把音频文件转换成url格式
-    NSURL *url = [NSURL fileURLWithPath:string];
+//    NSURL *url = [NSURL fileURLWithPath:string];
     
     NSData *mp3Data = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:mp3Url]];
+//    NSMutableData *mutableData = [NSMutableData alloc] initwith
     //初始化音频类 并且添加播放文件
 //    _avAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
      NSError*err;
@@ -103,7 +111,7 @@
     //设置最大音量
     _volumeSlider.maximumValue = 10.0f;
     //初始化音量为多少
-    _volumeSlider.value = 5.0f;
+    _volumeSlider.value = 1.0f;
     
     [self.view addSubview:_volumeSlider];
     
@@ -117,53 +125,81 @@
     
 }
 
+#pragma mark - 如果发生错误,而解码会报委托。-
+- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error{
+
+}
+
+#pragma mark - 音频会话时称为玩家在玩时被中断了。玩家将会被暂停。-
+- (void)audioPlayerBeginInterruption:(AVAudioPlayer *)player{
+
+}
+
+#pragma mark - 音频会话时被称为中断已经结束,这个球员玩耍时被打断了。-
+- (void)audioPlayerEndInterruption:(AVAudioPlayer *)player withOptions:(NSUInteger)flags{
+
+}
+
+- (void)audioPlayerEndInterruption:(AVAudioPlayer *)player withFlags:(NSUInteger)flags{
+
+}
+
+- (void)audioPlayerEndInterruption:(AVAudioPlayer *)player{
+
+
+}
+
+
 //播放
-- (void)play
-{
+- (void)play{
     [_avAudioPlayer play];
 }
 //暂停
-- (void)pause
-{
+- (void)pause{
     [_avAudioPlayer pause];
 }
 //停止
-- (void)stop
-{
+- (void)stop{
     _avAudioPlayer.currentTime = 0;  //当前播放时间设置为0
     [_avAudioPlayer stop];
 }
 //播放进度条
-- (void)playProgress
-{
+- (void)playProgress{
     //通过音频播放时长的百分比,给progressview进行赋值;
     _progressV.progress = _avAudioPlayer.currentTime/_avAudioPlayer.duration;
+    _playSlider.value = _avAudioPlayer.currentTime/_avAudioPlayer.duration;
 }
+
+//播放进度控制
+- (void) progressChange:(UISlider *) slider{
+    _avAudioPlayer.currentTime = slider.value * _avAudioPlayer.duration;
+    _progressV.progress = slider.value * _avAudioPlayer.duration;
+    
+}
+
 //声音开关(是否静音)
-- (void)onOrOff:(UISwitch *)sender
-{
+- (void)onOrOff:(UISwitch *)sender{
     _avAudioPlayer.volume = sender.on;
 }
 
 //播放音量控制
-- (void)volumeChange
-{
+- (void)volumeChange{
     _avAudioPlayer.volume = _volumeSlider.value;
 }
 
-//播放完成时调用的方法  (代理里的方法),需要设置代理才可以调用
-- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
-{
+#pragma mark - 播放完成时调用的方法  (代理里的方法),需要设置代理才可以调用 -
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
     [_timer invalidate]; //NSTimer暂停   invalidate  使...无效;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 
-#pragma mark - MP -
+#pragma mark - MPMediaPickerController -
+
 - (void)pickAndPlay:(UIButton *)sender {
     
     MPMediaPickerController * mediaPicker = [[MPMediaPickerController alloc] initWithMediaTypes:MPMediaTypeMusic];
@@ -182,15 +218,13 @@
 
 - (void)stopPlay:(UIButton *)sender {
     
-    if(self.myMusicPlayer != nil)
-    {
+    if(self.myMusicPlayer != nil){
         [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMusicPlayerControllerPlaybackStateDidChangeNotification object:self.myMusicPlayer];
         [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMusicPlayerControllerNowPlayingItemDidChangeNotification object:self.myMusicPlayer];
         [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMusicPlayerControllerVolumeDidChangeNotification object:self.myMusicPlayer];
         
         [self.myMusicPlayer stop];
     }
-    
 }
 
 

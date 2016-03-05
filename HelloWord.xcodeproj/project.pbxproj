@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840F784F1C8A7A1C0015E97D /* CGRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F784E1C8A7A1C0015E97D /* CGRectViewController.m */; };
 		841A29811C802C83000BB7DB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A29801C802C83000BB7DB /* Security.framework */; };
 		841A29831C802CAC000BB7DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A29821C802CAC000BB7DB /* SystemConfiguration.framework */; };
 		841A29851C802CBA000BB7DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A29841C802CBA000BB7DB /* CoreGraphics.framework */; };
@@ -76,6 +77,8 @@
 /* Begin PBXFileReference section */
 		4CA64CF9B757B45B95AFB3F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5F81A28979AA075F8D12ABEB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		840F784D1C8A7A1C0015E97D /* CGRectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGRectViewController.h; sourceTree = "<group>"; };
+		840F784E1C8A7A1C0015E97D /* CGRectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGRectViewController.m; sourceTree = "<group>"; };
 		841A29801C802C83000BB7DB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		841A29821C802CAC000BB7DB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		841A29841C802CBA000BB7DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -202,6 +205,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		840F784C1C8A7A080015E97D /* CGRect */ = {
+			isa = PBXGroup;
+			children = (
+				840F784D1C8A7A1C0015E97D /* CGRectViewController.h */,
+				840F784E1C8A7A1C0015E97D /* CGRectViewController.m */,
+			);
+			path = CGRect;
+			sourceTree = "<group>";
+		};
 		842E7C6E1C72C86100661515 /* UICalc */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +299,7 @@
 		8479CAD51C7046FC00BD1C6F /* HelloWord */ = {
 			isa = PBXGroup;
 			children = (
+				840F784C1C8A7A080015E97D /* CGRect */,
 				84A588611C8962F300E58CF0 /* player */,
 				84CCF2581C844CCA00B2DDB0 /* ImitationTouTiao */,
 				8491966C1C7FE6E80038BA6E /* NightDemo */,
@@ -621,6 +634,7 @@
 				8479CADB1C7046FC00BD1C6F /* AppDelegate.m in Sources */,
 				84CCF25C1C844D7000B2DDB0 /* TouTiaoDetailsController.m in Sources */,
 				84E904C91C883CE400B42926 /* DetialTabView.m in Sources */,
+				840F784F1C8A7A1C0015E97D /* CGRectViewController.m in Sources */,
 				8460535E1C7D7C8600308B49 /* MyTabBarController.m in Sources */,
 				848BD85C1C858FB3008D3641 /* BottomView.m in Sources */,
 				8449EAD01C71D08B00396D34 /* UIText.m in Sources */,

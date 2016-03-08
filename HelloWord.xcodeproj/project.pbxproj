@@ -42,9 +42,9 @@
 		849196771C8001E60038BA6E /* night.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849196751C8001E60038BA6E /* night.jpg */; };
 		849196781C8001E60038BA6E /* normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 849196761C8001E60038BA6E /* normal.jpg */; };
 		84A5885F1C89528700E58CF0 /* DetialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A5885D1C89528700E58CF0 /* DetialTableViewCell.m */; };
-		84A588601C89528700E58CF0 /* DetialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A5885E1C89528700E58CF0 /* DetialTableViewCell.xib */; };
 		84A588651C89634600E58CF0 /* Mp3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A588641C89634600E58CF0 /* Mp3ViewController.m */; };
 		84A588681C8997E300E58CF0 /* yese.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84A588671C8997E300E58CF0 /* yese.mp3 */; };
+		84C7480C1C8E71E3004B49CA /* UISTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7480B1C8E71E3004B49CA /* UISTableTableViewController.m */; };
 		84CCF25C1C844D7000B2DDB0 /* TouTiaoDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CCF25A1C844D7000B2DDB0 /* TouTiaoDetailsController.m */; };
 		84CCF25D1C844D7000B2DDB0 /* TouTiaoDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */; };
 		84E904C01C881E3300B42926 /* UMS_shared@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E904BF1C881E3300B42926 /* UMS_shared@2x.png */; };
@@ -134,10 +134,11 @@
 		849196761C8001E60038BA6E /* normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = normal.jpg; sourceTree = "<group>"; };
 		84A5885C1C89528700E58CF0 /* DetialTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetialTableViewCell.h; sourceTree = "<group>"; };
 		84A5885D1C89528700E58CF0 /* DetialTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetialTableViewCell.m; sourceTree = "<group>"; };
-		84A5885E1C89528700E58CF0 /* DetialTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetialTableViewCell.xib; sourceTree = "<group>"; };
 		84A588631C89634600E58CF0 /* Mp3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mp3ViewController.h; sourceTree = "<group>"; };
 		84A588641C89634600E58CF0 /* Mp3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mp3ViewController.m; sourceTree = "<group>"; };
 		84A588671C8997E300E58CF0 /* yese.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = yese.mp3; path = ../../../../../../Downloads/yese.mp3; sourceTree = "<group>"; };
+		84C7480A1C8E71E3004B49CA /* UISTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISTableTableViewController.h; sourceTree = "<group>"; };
+		84C7480B1C8E71E3004B49CA /* UISTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISTableTableViewController.m; sourceTree = "<group>"; };
 		84CCF2591C844D7000B2DDB0 /* TouTiaoDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouTiaoDetailsController.h; sourceTree = "<group>"; };
 		84CCF25A1C844D7000B2DDB0 /* TouTiaoDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouTiaoDetailsController.m; sourceTree = "<group>"; };
 		84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouTiaoDetailsController.xib; sourceTree = "<group>"; };
@@ -274,6 +275,15 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		847268561C8DAE7D0006987D /* TableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				84C7480A1C8E71E3004B49CA /* UISTableTableViewController.h */,
+				84C7480B1C8E71E3004B49CA /* UISTableTableViewController.m */,
+			);
+			path = TableViewDemo;
+			sourceTree = "<group>";
+		};
 		8479CACA1C7046FC00BD1C6F = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +309,7 @@
 		8479CAD51C7046FC00BD1C6F /* HelloWord */ = {
 			isa = PBXGroup;
 			children = (
+				847268561C8DAE7D0006987D /* TableViewDemo */,
 				840F784C1C8A7A080015E97D /* CGRect */,
 				84A588611C8962F300E58CF0 /* player */,
 				84CCF2581C844CCA00B2DDB0 /* ImitationTouTiao */,
@@ -407,7 +418,6 @@
 				84E904D31C886A1900B42926 /* DetialShowCountView.m */,
 				84A5885C1C89528700E58CF0 /* DetialTableViewCell.h */,
 				84A5885D1C89528700E58CF0 /* DetialTableViewCell.m */,
-				84A5885E1C89528700E58CF0 /* DetialTableViewCell.xib */,
 			);
 			path = ImitationTouTiao;
 			sourceTree = "<group>";
@@ -537,7 +547,6 @@
 			files = (
 				8460535B1C7D593800308B49 /* usersList.plist in Resources */,
 				8479CAE61C7046FC00BD1C6F /* LaunchScreen.storyboard in Resources */,
-				84A588601C89528700E58CF0 /* DetialTableViewCell.xib in Resources */,
 				849196781C8001E60038BA6E /* normal.jpg in Resources */,
 				84CCF25D1C844D7000B2DDB0 /* TouTiaoDetailsController.xib in Resources */,
 				84E904C61C882E3F00B42926 /* new_share_tabbar_normal.png in Resources */,
@@ -630,6 +639,7 @@
 				842E7C711C72C86100661515 /* CalcController.m in Sources */,
 				849196731C7FF3D60038BA6E /* NightController.m in Sources */,
 				846053621C7D7E7900308B49 /* ShareViewController.m in Sources */,
+				84C7480C1C8E71E3004B49CA /* UISTableTableViewController.m in Sources */,
 				8479CADE1C7046FC00BD1C6F /* ViewController.m in Sources */,
 				8479CADB1C7046FC00BD1C6F /* AppDelegate.m in Sources */,
 				84CCF25C1C844D7000B2DDB0 /* TouTiaoDetailsController.m in Sources */,

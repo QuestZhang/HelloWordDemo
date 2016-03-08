@@ -13,6 +13,7 @@
 #import "TouTiaoDetailsController.h"
 #import "DKNightVersion.h"
 #import "Mp3ViewController.h"
+#import "UISTableTableViewController.h"
 
 
 @interface MyTabBarController ()
@@ -49,7 +50,16 @@
     mp3.title = @"音乐";
     mp3.tabBarItem.image = [UIImage imageNamed:@"UMS_account"];
     
-    [self setViewControllers:[NSArray arrayWithObjects:mp3,toutiao,login,night,share,nil]];
+    UISTableTableViewController *uis = [[UISTableTableViewController alloc] init];
+    uis.title = @"UI控件列表";
+    uis.tabBarItem.image = [UIImage imageNamed:@"UMS_account"];
+    
+    [self presentViewController:uis animated:YES completion:nil];
+    
+//    push -> popTo  presentV.. ->  dismis
+    
+    
+    [self setViewControllers:[NSArray arrayWithObjects:uis,toutiao,login,night,share,nil]];
     [super viewDidLoad];
     
 }

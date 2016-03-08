@@ -22,5 +22,10 @@
 
 @synthesize content;//评论内容
 
+-(NSString *)description{
+
+    return [NSString stringWithFormat:@"评论人头像地址:%@\n,评论人昵称:%@\n,评论时间:%@\n,大母子个数:%@\n,评论个数:%@\n,评论内容:%@",imageUrl,name,time,praiseNumber,commentNumber,content];
+}
+
 
 @end

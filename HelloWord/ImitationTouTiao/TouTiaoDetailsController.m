@@ -47,12 +47,13 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     CGFloat tableViewY = CGRectGetMinY(_bottomView.frame);
     
     _tableView = [[DetialTabView alloc] initWithFrame:CGRectMake(0, 0, width, tableViewY)];
-    _data = [[NSMutableArray alloc] initWithCapacity:1];
+    _tableView.rowHeight = 100;
+    _data = [[NSMutableArray alloc] initWithCapacity:0];
     for (int i =0; i<20; i++) {
         [self initData:i];
     }
-    _tableView.data = _data;
-//    _tableView.data;
+//    [_tableView.data insertObjects:_data atIndexes:[NSIndexSet indexSetWithIndex:1]];
+    //    _tableView.data;
     
     [self.view addSubview:_bottomView];
     [self.view addSubview:_tableView];
@@ -87,10 +88,10 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 -(void) initData:(NSUInteger) count{
     DetialEntity *entity = [[DetialEntity alloc] init];
     [entity setImageUrl:@"normal"];
-    [entity setName:[NSString stringWithFormat:@"张文强%d",count]];
+    [entity setName:[NSString stringWithFormat:@"张文强%ld",count]];
     [entity setTime:@"一小时前"];
     [entity setContent:@"朝鲜真是作死"];
-    [_data addObject:entity];
+    [_tableView.data addObject:entity];
 }
 
 @end

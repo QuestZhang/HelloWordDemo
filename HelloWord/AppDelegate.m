@@ -50,8 +50,10 @@
     //分享到支付宝朋友圈
     [UMSocialAlipayShareHandler setAlipayShareAppId:@"2015111700822536"];
     
+    CGFloat screemWidth = [[UIScreen mainScreen] bounds].size.width;
+    CGFloat screemHeight = [[UIScreen mainScreen] bounds].size.height;
     
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, screemWidth, screemHeight)];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

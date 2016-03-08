@@ -10,10 +10,10 @@
 
 @interface DetialTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *pic;
+@property(nonatomic,strong) UIImageView *pic;
 
-@property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UILabel *time;
-@property (weak, nonatomic) IBOutlet UILabel *content;
+@property(nonatomic,strong) UILabel *name;
+@property(nonatomic,strong) UILabel *time;
+@property(nonatomic,strong) UILabel *content;
 
 @end

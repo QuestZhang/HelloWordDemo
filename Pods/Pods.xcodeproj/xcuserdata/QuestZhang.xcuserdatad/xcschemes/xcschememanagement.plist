@@ -14,12 +14,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,7 +42,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>808AB5BB891E737AF93C2E61EA666827</key>
+		<key>8F74D9EA91F4C43190670066BAC37D44</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -43,6 +53,16 @@
 			<true/>
 		</dict>
 		<key>A58A8622BD5B9F52D4CC17238F7F44CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECE05990AF05454ADA64483B364078AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F37E28FA47701665FE206C3297A13E5B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

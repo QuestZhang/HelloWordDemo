@@ -6,9 +6,9 @@
 //  Copyright © 2016年 zhangwenqiang. All rights reserved.
 //
 
-#import "UISwitchController.h"
+#import "UISwitchViewController.h"
 
-@interface UISwitchController ()
+@interface UISwitchViewController ()
 
 @property (weak, nonatomic) IBOutlet UISwitch *upSwitch;
 
@@ -16,14 +16,18 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *SliderValue;
 
+@property (weak, nonatomic) IBOutlet UISlider *slider;
 
 @end
 
-@implementation UISwitchController
+@implementation UISwitchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    _slider.minimumValue = 0.0f;
+    _slider.maximumValue = 100.0f;
+    [_slider setValue:0.0f];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,13 +54,13 @@
 
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

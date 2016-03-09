@@ -8,8 +8,6 @@
 
 #import "UISTableViewController.h"
 
-@class UIText;
-
 @interface UISTableViewController ()
 
 @property(nonatomic,strong) NSMutableArray *title;
@@ -22,6 +20,8 @@
 -(void) loadData;
 
 -(void) switchUI:(UIViewType) type;
+
+-(UIViewType)getType:(NSString *)name;
 
 @end
 
@@ -61,6 +61,7 @@
     [title addObject:@"UITextView控件"];
     [title addObject:@"UITextFilde控件"];
     [title addObject:@"UIButton控件"];
+    [title addObject:@"UISwitch控件"];
     [title addObject:@""];
     [dict setObject:title forKey:@"IOS的UI控件"];
     
@@ -89,7 +90,6 @@
 - (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView{
     return nil;
 }
-
 
 //获取某一行内容
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -139,7 +139,11 @@
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
                                                               NSLog(@"确定了");
-                                                              [self switchUI:UILabelType];
+                                                              NSString *name = [msgContent substringWithRange:NSMakeRange(0, msgContent.length-2)];
+                                                              [self switchUI:[self getType:name]];
+                                                              unichar ch = [name characterAtIndex:1];
+                                                              NSLog(@"-----###---%@-%c-",name,ch);
+//                                                              [name integerValue];//字符串转成Integer
                                                           }];
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction* action){
         NSLog(@"取消了");
@@ -151,6 +155,20 @@
     
 }
 
+-(UIViewType)getType:(NSString *)name{
+    if([@"UILabel" isEqualToString:name]){
+        return UILabelType;
+    }else if([@"UITextView" isEqualToString:name]){
+        return UILabelType;
+    }else if([@"UITextFilde" isEqualToString:name]){
+        return UILabelType;
+    }else if ([@"UISwitch" isEqualToString:name]){
+        return UISwitchType;
+    }
+    
+    return -1;
+}
+
 -(void)switchUI:(UIViewType) type{
     switch (type) {
         case UILabelType:
@@ -159,7 +177,7 @@
             [self showViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] sender:nil];
             
 //            [self presentViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] animated:YES completion:nil];
-             NSLog(@"确定了---");
+             NSLog(@"---确定了---");
             
 //            [self.navigationController pushViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] animated:YES];
             
@@ -179,6 +197,11 @@
         case UITextFildType:
             
             break;
+            
+        case UISwitchType:
+             [self showViewController:[[UISwitchViewController alloc] initWithNibName:@"UISwitchViewController" bundle:nil] sender:nil];
+            break;
+
             
         default:
             break;

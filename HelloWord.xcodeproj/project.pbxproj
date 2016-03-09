@@ -45,9 +45,10 @@
 		84CCF25D1C844D7000B2DDB0 /* TouTiaoDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */; };
 		84D94B1C1C8FC61700CCC3DD /* ButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B121C8FC61700CCC3DD /* ButtonController.m */; };
 		84D94B1D1C8FC61700CCC3DD /* ColorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B151C8FC61700CCC3DD /* ColorController.m */; };
-		84D94B1E1C8FC61700CCC3DD /* UISwitchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B181C8FC61700CCC3DD /* UISwitchController.m */; };
 		84D94B2F1C8FEBEC00CCC3DD /* UIText.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B2D1C8FEBEC00CCC3DD /* UIText.m */; };
 		84D94B301C8FEBEC00CCC3DD /* UIText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D94B2E1C8FEBEC00CCC3DD /* UIText.xib */; };
+		84D94B361C9028E600CCC3DD /* UISwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B341C9028E600CCC3DD /* UISwitchViewController.m */; };
+		84D94B371C9028E600CCC3DD /* UISwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D94B351C9028E600CCC3DD /* UISwitchViewController.xib */; };
 		84E904C01C881E3300B42926 /* UMS_shared@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E904BF1C881E3300B42926 /* UMS_shared@2x.png */; };
 		84E904C41C882E3F00B42926 /* love_video_night.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E904C11C882E3F00B42926 /* love_video_night.png */; };
 		84E904C51C882E3F00B42926 /* new_review_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E904C21C882E3F00B42926 /* new_review_tabbar.png */; };
@@ -139,11 +140,12 @@
 		84D94B121C8FC61700CCC3DD /* ButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonController.m; sourceTree = "<group>"; };
 		84D94B141C8FC61700CCC3DD /* ColorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorController.h; sourceTree = "<group>"; };
 		84D94B151C8FC61700CCC3DD /* ColorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorController.m; sourceTree = "<group>"; };
-		84D94B171C8FC61700CCC3DD /* UISwitchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISwitchController.h; sourceTree = "<group>"; };
-		84D94B181C8FC61700CCC3DD /* UISwitchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISwitchController.m; sourceTree = "<group>"; };
 		84D94B2C1C8FEBEC00CCC3DD /* UIText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIText.h; sourceTree = "<group>"; };
 		84D94B2D1C8FEBEC00CCC3DD /* UIText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIText.m; sourceTree = "<group>"; };
 		84D94B2E1C8FEBEC00CCC3DD /* UIText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIText.xib; sourceTree = "<group>"; };
+		84D94B331C9028E600CCC3DD /* UISwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISwitchViewController.h; sourceTree = "<group>"; };
+		84D94B341C9028E600CCC3DD /* UISwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISwitchViewController.m; sourceTree = "<group>"; };
+		84D94B351C9028E600CCC3DD /* UISwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UISwitchViewController.xib; sourceTree = "<group>"; };
 		84E904BF1C881E3300B42926 /* UMS_shared@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UMS_shared@2x.png"; sourceTree = "<group>"; };
 		84E904C11C882E3F00B42926 /* love_video_night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love_video_night.png; sourceTree = "<group>"; };
 		84E904C21C882E3F00B42926 /* new_review_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_review_tabbar.png; sourceTree = "<group>"; };
@@ -417,8 +419,9 @@
 		84D94B161C8FC61700CCC3DD /* UISwitch */ = {
 			isa = PBXGroup;
 			children = (
-				84D94B171C8FC61700CCC3DD /* UISwitchController.h */,
-				84D94B181C8FC61700CCC3DD /* UISwitchController.m */,
+				84D94B331C9028E600CCC3DD /* UISwitchViewController.h */,
+				84D94B341C9028E600CCC3DD /* UISwitchViewController.m */,
+				84D94B351C9028E600CCC3DD /* UISwitchViewController.xib */,
 			);
 			path = UISwitch;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				84CCF25D1C844D7000B2DDB0 /* TouTiaoDetailsController.xib in Resources */,
 				84E904C61C882E3F00B42926 /* new_share_tabbar_normal.png in Resources */,
 				8479CAE31C7046FC00BD1C6F /* Assets.xcassets in Resources */,
+				84D94B371C9028E600CCC3DD /* UISwitchViewController.xib in Resources */,
 				846053701C7D8FE100308B49 /* UMS_account@2x.png in Resources */,
 				84E904C41C882E3F00B42926 /* love_video_night.png in Resources */,
 				846053681C7D7E9A00308B49 /* LoginViewController.xib in Resources */,
@@ -648,6 +652,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8486D19F1C74790D00AB319A /* NineController.m in Sources */,
+				84D94B361C9028E600CCC3DD /* UISwitchViewController.m in Sources */,
 				84D94B1D1C8FC61700CCC3DD /* ColorController.m in Sources */,
 				842E7C711C72C86100661515 /* CalcController.m in Sources */,
 				849196731C7FF3D60038BA6E /* NightController.m in Sources */,
@@ -669,7 +674,6 @@
 				84A5885F1C89528700E58CF0 /* DetialTableViewCell.m in Sources */,
 				84D94B2F1C8FEBEC00CCC3DD /* UIText.m in Sources */,
 				848F80BB1C87194500418C69 /* SocialGroupView.m in Sources */,
-				84D94B1E1C8FC61700CCC3DD /* UISwitchController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

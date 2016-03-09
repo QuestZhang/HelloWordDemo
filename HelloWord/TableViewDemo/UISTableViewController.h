@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "UIText.h"
+#import "UISwitchViewController.h"
 
 typedef enum{
     
     UILabelType,
     UIBtnType,
     UITextViewType,
-    UITextFildType
+    UITextFildType,
+    UISwitchType
     
 }UIViewType;
 

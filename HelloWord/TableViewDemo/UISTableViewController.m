@@ -62,6 +62,7 @@
     [title addObject:@"UITextFilde控件"];
     [title addObject:@"UIButton控件"];
     [title addObject:@"UISwitch控件"];
+    [title addObject:@"UIView控件"];
     [title addObject:@""];
     [dict setObject:title forKey:@"IOS的UI控件"];
     
@@ -164,6 +165,8 @@
         return UILabelType;
     }else if ([@"UISwitch" isEqualToString:name]){
         return UISwitchType;
+    }else if ([@"UIView" isEqualToString:name]){
+        return UIViewViewType;
     }
     
     return -1;
@@ -200,6 +203,10 @@
             
         case UISwitchType:
              [self showViewController:[[UISwitchViewController alloc] initWithNibName:@"UISwitchViewController" bundle:nil] sender:nil];
+            break;
+            
+        case UIViewViewType:
+            [self showViewController:[[UIViewViewController alloc] initWithNibName:@"UIViewViewController" bundle:nil] sender:nil];
             break;
 
             

@@ -44,11 +44,14 @@
 		84CCF25C1C844D7000B2DDB0 /* TouTiaoDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CCF25A1C844D7000B2DDB0 /* TouTiaoDetailsController.m */; };
 		84CCF25D1C844D7000B2DDB0 /* TouTiaoDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */; };
 		84D94B1C1C8FC61700CCC3DD /* ButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B121C8FC61700CCC3DD /* ButtonController.m */; };
-		84D94B1D1C8FC61700CCC3DD /* ColorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B151C8FC61700CCC3DD /* ColorController.m */; };
 		84D94B2F1C8FEBEC00CCC3DD /* UIText.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B2D1C8FEBEC00CCC3DD /* UIText.m */; };
 		84D94B301C8FEBEC00CCC3DD /* UIText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D94B2E1C8FEBEC00CCC3DD /* UIText.xib */; };
 		84D94B361C9028E600CCC3DD /* UISwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B341C9028E600CCC3DD /* UISwitchViewController.m */; };
 		84D94B371C9028E600CCC3DD /* UISwitchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D94B351C9028E600CCC3DD /* UISwitchViewController.xib */; };
+		84D94B411C9035E900CCC3DD /* UIViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B3F1C9035E900CCC3DD /* UIViewViewController.m */; };
+		84D94B421C9035E900CCC3DD /* UIViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D94B401C9035E900CCC3DD /* UIViewViewController.xib */; };
+		84D94B471C9036F400CCC3DD /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B451C9036F400CCC3DD /* ProgressViewController.m */; };
+		84D94B481C9036F400CCC3DD /* ProgressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D94B461C9036F400CCC3DD /* ProgressViewController.xib */; };
 		84E904C01C881E3300B42926 /* UMS_shared@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E904BF1C881E3300B42926 /* UMS_shared@2x.png */; };
 		84E904C41C882E3F00B42926 /* love_video_night.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E904C11C882E3F00B42926 /* love_video_night.png */; };
 		84E904C51C882E3F00B42926 /* new_review_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E904C21C882E3F00B42926 /* new_review_tabbar.png */; };
@@ -138,14 +141,18 @@
 		84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouTiaoDetailsController.xib; sourceTree = "<group>"; };
 		84D94B111C8FC61700CCC3DD /* ButtonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonController.h; sourceTree = "<group>"; };
 		84D94B121C8FC61700CCC3DD /* ButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonController.m; sourceTree = "<group>"; };
-		84D94B141C8FC61700CCC3DD /* ColorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorController.h; sourceTree = "<group>"; };
-		84D94B151C8FC61700CCC3DD /* ColorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorController.m; sourceTree = "<group>"; };
 		84D94B2C1C8FEBEC00CCC3DD /* UIText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIText.h; sourceTree = "<group>"; };
 		84D94B2D1C8FEBEC00CCC3DD /* UIText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIText.m; sourceTree = "<group>"; };
 		84D94B2E1C8FEBEC00CCC3DD /* UIText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIText.xib; sourceTree = "<group>"; };
 		84D94B331C9028E600CCC3DD /* UISwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISwitchViewController.h; sourceTree = "<group>"; };
 		84D94B341C9028E600CCC3DD /* UISwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISwitchViewController.m; sourceTree = "<group>"; };
 		84D94B351C9028E600CCC3DD /* UISwitchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UISwitchViewController.xib; sourceTree = "<group>"; };
+		84D94B3E1C9035E900CCC3DD /* UIViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewViewController.h; sourceTree = "<group>"; };
+		84D94B3F1C9035E900CCC3DD /* UIViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewViewController.m; sourceTree = "<group>"; };
+		84D94B401C9035E900CCC3DD /* UIViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIViewViewController.xib; sourceTree = "<group>"; };
+		84D94B441C9036F400CCC3DD /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
+		84D94B451C9036F400CCC3DD /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
+		84D94B461C9036F400CCC3DD /* ProgressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgressViewController.xib; sourceTree = "<group>"; };
 		84E904BF1C881E3300B42926 /* UMS_shared@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UMS_shared@2x.png"; sourceTree = "<group>"; };
 		84E904C11C882E3F00B42926 /* love_video_night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love_video_night.png; sourceTree = "<group>"; };
 		84E904C21C882E3F00B42926 /* new_review_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_review_tabbar.png; sourceTree = "<group>"; };
@@ -390,8 +397,9 @@
 		84D94B0F1C8FC58300CCC3DD /* UIViewDemos */ = {
 			isa = PBXGroup;
 			children = (
+				84D94B431C9036DE00CCC3DD /* UIProgressView */,
+				84D94B3D1C9035E900CCC3DD /* UIViewDemo */,
 				84D94B101C8FC61700CCC3DD /* ButtonDemo */,
-				84D94B131C8FC61700CCC3DD /* UIKitDemo */,
 				84D94B161C8FC61700CCC3DD /* UISwitch */,
 				84D94B191C8FC61700CCC3DD /* UIText */,
 			);
@@ -405,15 +413,6 @@
 				84D94B121C8FC61700CCC3DD /* ButtonController.m */,
 			);
 			path = ButtonDemo;
-			sourceTree = "<group>";
-		};
-		84D94B131C8FC61700CCC3DD /* UIKitDemo */ = {
-			isa = PBXGroup;
-			children = (
-				84D94B141C8FC61700CCC3DD /* ColorController.h */,
-				84D94B151C8FC61700CCC3DD /* ColorController.m */,
-			);
-			path = UIKitDemo;
 			sourceTree = "<group>";
 		};
 		84D94B161C8FC61700CCC3DD /* UISwitch */ = {
@@ -434,6 +433,26 @@
 				84D94B2E1C8FEBEC00CCC3DD /* UIText.xib */,
 			);
 			path = UIText;
+			sourceTree = "<group>";
+		};
+		84D94B3D1C9035E900CCC3DD /* UIViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				84D94B3E1C9035E900CCC3DD /* UIViewViewController.h */,
+				84D94B3F1C9035E900CCC3DD /* UIViewViewController.m */,
+				84D94B401C9035E900CCC3DD /* UIViewViewController.xib */,
+			);
+			path = UIViewDemo;
+			sourceTree = "<group>";
+		};
+		84D94B431C9036DE00CCC3DD /* UIProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				84D94B441C9036F400CCC3DD /* ProgressViewController.h */,
+				84D94B451C9036F400CCC3DD /* ProgressViewController.m */,
+				84D94B461C9036F400CCC3DD /* ProgressViewController.xib */,
+			);
+			path = UIProgressView;
 			sourceTree = "<group>";
 		};
 		84EB06AB1C756F35001E0DF4 /* youmeng */ = {
@@ -566,6 +585,7 @@
 				84E904C61C882E3F00B42926 /* new_share_tabbar_normal.png in Resources */,
 				8479CAE31C7046FC00BD1C6F /* Assets.xcassets in Resources */,
 				84D94B371C9028E600CCC3DD /* UISwitchViewController.xib in Resources */,
+				84D94B481C9036F400CCC3DD /* ProgressViewController.xib in Resources */,
 				846053701C7D8FE100308B49 /* UMS_account@2x.png in Resources */,
 				84E904C41C882E3F00B42926 /* love_video_night.png in Resources */,
 				846053681C7D7E9A00308B49 /* LoginViewController.xib in Resources */,
@@ -574,6 +594,7 @@
 				8449EAD61C71D4F800396D34 /* My.storyboard in Resources */,
 				8479CAE11C7046FC00BD1C6F /* Main.storyboard in Resources */,
 				849196741C7FF3D60038BA6E /* NightController.xib in Resources */,
+				84D94B421C9035E900CCC3DD /* UIViewViewController.xib in Resources */,
 				849196771C8001E60038BA6E /* night.jpg in Resources */,
 				84E904C51C882E3F00B42926 /* new_review_tabbar.png in Resources */,
 				84A588681C8997E300E58CF0 /* yese.mp3 in Resources */,
@@ -653,17 +674,18 @@
 			files = (
 				8486D19F1C74790D00AB319A /* NineController.m in Sources */,
 				84D94B361C9028E600CCC3DD /* UISwitchViewController.m in Sources */,
-				84D94B1D1C8FC61700CCC3DD /* ColorController.m in Sources */,
 				842E7C711C72C86100661515 /* CalcController.m in Sources */,
 				849196731C7FF3D60038BA6E /* NightController.m in Sources */,
 				846053621C7D7E7900308B49 /* ShareViewController.m in Sources */,
 				84C7480C1C8E71E3004B49CA /* UISTableViewController.m in Sources */,
 				8479CADE1C7046FC00BD1C6F /* ViewController.m in Sources */,
+				84D94B471C9036F400CCC3DD /* ProgressViewController.m in Sources */,
 				8479CADB1C7046FC00BD1C6F /* AppDelegate.m in Sources */,
 				84CCF25C1C844D7000B2DDB0 /* TouTiaoDetailsController.m in Sources */,
 				84E904C91C883CE400B42926 /* DetialTabView.m in Sources */,
 				840F784F1C8A7A1C0015E97D /* CGRectViewController.m in Sources */,
 				8460535E1C7D7C8600308B49 /* MyTabBarController.m in Sources */,
+				84D94B411C9035E900CCC3DD /* UIViewViewController.m in Sources */,
 				848BD85C1C858FB3008D3641 /* BottomView.m in Sources */,
 				84E904D11C885D8C00B42926 /* DetialEntity.m in Sources */,
 				84D94B1C1C8FC61700CCC3DD /* ButtonController.m in Sources */,

@@ -66,64 +66,6 @@
             </objects>
             <point key="canvasLocation" x="1254" y="264"/>
         </scene>
-        <!--Color Controller-->
-        <scene sceneID="ABf-V9-K3M">
-            <objects>
-                <viewController id="G7J-K8-Lft" customClass="ColorController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mWp-IF-6Ga"/>
-                        <viewControllerLayoutGuide type="bottom" id="t4X-yt-4K4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5uz-0q-e3S" userLabel="黑色的view">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Npw-Ao-Ugu" userLabel="白色的view">
-                                <rect key="frame" x="37" y="28" width="300" height="300"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of7-lw-l8m">
-                                        <rect key="frame" x="88" y="22" width="124" height="30"/>
-                                        <state key="normal" title=" 修改父控件为红色"/>
-                                        <connections>
-                                            <action selector="changeFatherViewColor:" destination="G7J-K8-Lft" eventType="touchUpInside" id="MoK-Na-b2x"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGR-iH-5Hh">
-                                        <rect key="frame" x="73" y="60" width="154" height="30"/>
-                                        <state key="normal" title=" 修改父控件为随机颜色"/>
-                                        <connections>
-                                            <action selector="changeFatherColorRandom:" destination="G7J-K8-Lft" eventType="touchUpInside" id="qb6-8r-r7b"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8k7-0Q-aU0">
-                                <rect key="frame" x="37" y="388" width="122" height="30"/>
-                                <state key="normal" title="创建一个view出来"/>
-                                <connections>
-                                    <action selector="createView:" destination="G7J-K8-Lft" eventType="touchUpInside" id="FnC-0G-tYI"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLS-dK-3B2">
-                                <rect key="frame" x="37" y="418" width="182" height="30"/>
-                                <state key="normal" title="创建一个view出来并动一下"/>
-                                <connections>
-                                    <action selector="createViewAndMove:" destination="G7J-K8-Lft" eventType="touchUpInside" id="oIY-v5-xt4"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="withView" destination="Npw-Ao-Ugu" id="JsF-wc-g7W"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccb-vl-gPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1691.5" y="263.5"/>
-        </scene>
         <!--Button-->
         <scene sceneID="aWd-8x-Xca">
             <objects>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIViewViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="withView" destination="dpi-sK-zcT" id="SX9-BC-Jce"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpi-sK-zcT" userLabel="白色的view">
+                    <rect key="frame" x="9" y="67" width="357" height="300"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ZM-uh-Wja">
+                            <rect key="frame" x="88" y="22" width="124" height="30"/>
+                            <state key="normal" title=" 修改父控件为红色"/>
+                            <connections>
+                                <action selector="changeFatherViewColor:" destination="-1" eventType="touchUpInside" id="wRM-62-74e"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzr-lF-uq1" userLabel="修改父控件为随机颜色">
+                            <rect key="frame" x="73" y="60" width="154" height="30"/>
+                            <state key="normal" title=" 修改父控件为随机颜色"/>
+                            <connections>
+                                <action selector="changeFatherColorRandom:" destination="-1" eventType="touchUpInside" id="Azf-6Q-cte"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJy-L2-GOV">
+                    <rect key="frame" x="9" y="427" width="122" height="30"/>
+                    <state key="normal" title="创建一个view出来"/>
+                    <connections>
+                        <action selector="createView:" destination="-1" eventType="touchUpInside" id="WWf-qJ-FoJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrD-Q5-wa1">
+                    <rect key="frame" x="9" y="457" width="182" height="30"/>
+                    <state key="normal" title="创建一个view出来并动一下"/>
+                    <connections>
+                        <action selector="createViewAndMove:" destination="-1" eventType="touchUpInside" id="J7E-0s-ZC7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="rrD-Q5-wa1" firstAttribute="top" secondItem="GJy-L2-GOV" secondAttribute="bottom" id="3v5-BG-JtP"/>
+                <constraint firstItem="dpi-sK-zcT" firstAttribute="leading" secondItem="rrD-Q5-wa1" secondAttribute="leading" id="HUT-pc-Aqy"/>
+                <constraint firstItem="GJy-L2-GOV" firstAttribute="top" secondItem="dpi-sK-zcT" secondAttribute="bottom" constant="60" id="Htc-wS-8ca"/>
+                <constraint firstItem="dpi-sK-zcT" firstAttribute="leading" secondItem="GJy-L2-GOV" secondAttribute="leading" id="ICe-ng-3K0"/>
+                <constraint firstItem="dpi-sK-zcT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="67" id="dTQ-Sb-5fM"/>
+                <constraint firstAttribute="bottom" secondItem="dpi-sK-zcT" secondAttribute="bottom" constant="300" id="mLs-f7-meZ"/>
+                <constraint firstItem="dpi-sK-zcT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="9" id="rId-ZT-Dab"/>
+                <constraint firstItem="dpi-sK-zcT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wkg-ye-Sfl"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>

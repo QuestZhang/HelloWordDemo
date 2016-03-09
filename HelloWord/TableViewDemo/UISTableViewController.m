@@ -6,15 +6,27 @@
 //  Copyright © 2016年 zhangwenqiang. All rights reserved.
 //
 
-#import "UISTableTableViewController.h"
+#import "UISTableViewController.h"
 
-@interface UISTableTableViewController ()
+@interface UISTableViewController ()
+
+@property(nonatomic,strong) NSMutableArray *title;
+
+@property(nonatomic,strong) NSMutableArray *msg;
+
+@property(nonatomic,strong) NSMutableDictionary *dict;
 
 -(void) loadData;
 
 @end
 
-@implementation UISTableTableViewController
+@implementation UISTableViewController
+
+@synthesize title;
+
+@synthesize msg;
+
+@synthesize dict;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,11 +36,30 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    CGFloat width = [[UIScreen mainScreen] bounds].size.width;
-    CGFloat height = [[UIScreen mainScreen] bounds].size.height;
-    self.tableView.frame = CGRectMake(0, 20, width, height-90);
+    
     // self.tableView.transform = CGAffineTransformMakeRotation(M_PI/-2); //旋转滑动方向
     self.tableView.rowHeight = 60.0;
+    
+    dict = [NSMutableDictionary dictionaryWithCapacity:0];
+    [self loadData];
+}
+
+-(void)loadData{
+    title = [NSMutableArray arrayWithCapacity:0];
+    [title addObject:@""];
+    [title addObject:@"NSLog打印"];
+    [title addObject:@""];
+    [dict setObject:title forKey:@"OC语法基础"];
+    
+    title = [NSMutableArray arrayWithCapacity:0];
+    [title addObject:@""];
+    [title addObject:@"UILabel控件"];
+    [title addObject:@"UITextView控件"];
+    [title addObject:@"UITextFilde控件"];
+    [title addObject:@"UIButton控件"];
+    [title addObject:@""];
+    [dict setObject:title forKey:@"IOS的UI控件"];
+    
     
 }
 
@@ -37,35 +68,56 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
+#pragma mark - Table view title source
 
-//表示在这TableView里的部分数量
+//表示在这TableView里的块数量
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 1;
+    
+    return dict.allKeys.count;
 }
 
 //表示在这个部分里的行的数量
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 16;
+    
+    return ((NSArray *)[dict objectForKey:dict.allKeys[section]]).count;
 }
 
+- (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView{
+    return nil;
+}
 
 //获取某一行内容
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *cellIdetifier = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdetifier];
+    
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdetifier];
         //设置选中的风格
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.textAlignment = NSTextAlignmentLeft;
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.textLabel.transform = CGAffineTransformMakeRotation(M_PI*2);//设置文本内容旋转
+        cell.textLabel.frame = CGRectMake(10, CGRectGetMinY(cell.textLabel.frame), CGRectGetWidth(cell.textLabel.frame), CGRectGetHeight(cell.textLabel.frame));
+        
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row+1];
+    
+    static NSInteger current = -1;
+    
+    if (current == indexPath.section) {
+        cell.textLabel.text = (NSString *)[dict objectForKey:dict.allKeys[indexPath.section]][indexPath.row];
+        
+    }else{
+        NSString *string2 = (NSString *)dict.allKeys[indexPath.section];
+        NSString *string1 =(NSString *)[dict objectForKey:dict.allKeys[indexPath.section]][indexPath.row];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@%@",string2,string1];
+    }
+    current = indexPath.section;
+    //    cell.textLabel.text = (NSString *)[dict objectForKey:dict.allKeys[indexPath.section]][indexPath.row];
+    NSLog(@"-----section-----%ld",indexPath.section);
     
     return cell;
 }
@@ -75,8 +127,15 @@
     
     NSString *str = [NSString stringWithFormat:@"你选择的是第%ld行",indexPath.row+1];
     
-    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"My Alert"
-                                                                   message:str
+    NSString *titleContent = dict.allKeys[indexPath.section];
+    NSString *msgContent = [dict objectForKey:dict.allKeys[indexPath.section]][indexPath.row];
+    if ([msgContent isEqualToString:@""] && msgContent.length == 0) {
+        tableView.
+        return;
+    }
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:titleContent
+                                                                   message:msgContent
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault

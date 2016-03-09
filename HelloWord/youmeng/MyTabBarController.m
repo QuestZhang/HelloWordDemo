@@ -13,7 +13,7 @@
 #import "TouTiaoDetailsController.h"
 #import "DKNightVersion.h"
 #import "Mp3ViewController.h"
-#import "UISTableTableViewController.h"
+#import "UISTableViewController.h"
 
 
 @interface MyTabBarController ()
@@ -50,7 +50,7 @@
     mp3.title = @"音乐";
     mp3.tabBarItem.image = [UIImage imageNamed:@"UMS_account"];
     
-    UISTableTableViewController *uis = [[UISTableTableViewController alloc] init];
+    UISTableViewController *uis = [[UISTableViewController alloc] init];
     uis.title = @"UI控件列表";
     uis.tabBarItem.image = [UIImage imageNamed:@"UMS_account"];
     

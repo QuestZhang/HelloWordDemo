@@ -44,7 +44,7 @@
 		84A5885F1C89528700E58CF0 /* DetialTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A5885D1C89528700E58CF0 /* DetialTableViewCell.m */; };
 		84A588651C89634600E58CF0 /* Mp3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A588641C89634600E58CF0 /* Mp3ViewController.m */; };
 		84A588681C8997E300E58CF0 /* yese.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84A588671C8997E300E58CF0 /* yese.mp3 */; };
-		84C7480C1C8E71E3004B49CA /* UISTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7480B1C8E71E3004B49CA /* UISTableTableViewController.m */; };
+		84C7480C1C8E71E3004B49CA /* UISTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7480B1C8E71E3004B49CA /* UISTableViewController.m */; };
 		84CCF25C1C844D7000B2DDB0 /* TouTiaoDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CCF25A1C844D7000B2DDB0 /* TouTiaoDetailsController.m */; };
 		84CCF25D1C844D7000B2DDB0 /* TouTiaoDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */; };
 		84E904C01C881E3300B42926 /* UMS_shared@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E904BF1C881E3300B42926 /* UMS_shared@2x.png */; };
@@ -137,8 +137,8 @@
 		84A588631C89634600E58CF0 /* Mp3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mp3ViewController.h; sourceTree = "<group>"; };
 		84A588641C89634600E58CF0 /* Mp3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mp3ViewController.m; sourceTree = "<group>"; };
 		84A588671C8997E300E58CF0 /* yese.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = yese.mp3; path = ../../../../../../Downloads/yese.mp3; sourceTree = "<group>"; };
-		84C7480A1C8E71E3004B49CA /* UISTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISTableTableViewController.h; sourceTree = "<group>"; };
-		84C7480B1C8E71E3004B49CA /* UISTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISTableTableViewController.m; sourceTree = "<group>"; };
+		84C7480A1C8E71E3004B49CA /* UISTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISTableViewController.h; sourceTree = "<group>"; };
+		84C7480B1C8E71E3004B49CA /* UISTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISTableViewController.m; sourceTree = "<group>"; };
 		84CCF2591C844D7000B2DDB0 /* TouTiaoDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouTiaoDetailsController.h; sourceTree = "<group>"; };
 		84CCF25A1C844D7000B2DDB0 /* TouTiaoDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouTiaoDetailsController.m; sourceTree = "<group>"; };
 		84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouTiaoDetailsController.xib; sourceTree = "<group>"; };
@@ -278,8 +278,8 @@
 		847268561C8DAE7D0006987D /* TableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				84C7480A1C8E71E3004B49CA /* UISTableTableViewController.h */,
-				84C7480B1C8E71E3004B49CA /* UISTableTableViewController.m */,
+				84C7480A1C8E71E3004B49CA /* UISTableViewController.h */,
+				84C7480B1C8E71E3004B49CA /* UISTableViewController.m */,
 			);
 			path = TableViewDemo;
 			sourceTree = "<group>";
@@ -639,7 +639,7 @@
 				842E7C711C72C86100661515 /* CalcController.m in Sources */,
 				849196731C7FF3D60038BA6E /* NightController.m in Sources */,
 				846053621C7D7E7900308B49 /* ShareViewController.m in Sources */,
-				84C7480C1C8E71E3004B49CA /* UISTableTableViewController.m in Sources */,
+				84C7480C1C8E71E3004B49CA /* UISTableViewController.m in Sources */,
 				8479CADE1C7046FC00BD1C6F /* ViewController.m in Sources */,
 				8479CADB1C7046FC00BD1C6F /* AppDelegate.m in Sources */,
 				84CCF25C1C844D7000B2DDB0 /* TouTiaoDetailsController.m in Sources */,

@@ -14,6 +14,7 @@
 #import "DKNightVersion.h"
 #import "Mp3ViewController.h"
 #import "UISTableViewController.h"
+#import "UIText.h"
 
 
 @interface MyTabBarController ()
@@ -54,7 +55,12 @@
     uis.title = @"UI控件列表";
     uis.tabBarItem.image = [UIImage imageNamed:@"UMS_account"];
     
-    [self presentViewController:uis animated:YES completion:nil];
+    UIText *uiText = [[UIText alloc] initWithNibName:@"UIText" bundle:nil];
+    [uiText setTitle:@"Text"];
+    [uiText.tabBarItem setImage:[UIImage imageNamed:@"UMS_account"]];
+    
+//    [self presentViewController:uis animated:YES completion:nil];
+//    self showDetailViewController: sender:<#(nullable id)#>
     
 //    push -> popTo  presentV.. ->  dismis
     

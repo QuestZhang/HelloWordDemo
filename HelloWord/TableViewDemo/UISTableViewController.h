@@ -7,6 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIText.h"
+
+typedef enum{
+    
+    UILabelType,
+    UIBtnType,
+    UITextViewType,
+    UITextFildType
+    
+}UIViewType;
 
 @interface UISTableViewController : UITableViewController
 

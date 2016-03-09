@@ -13,10 +13,6 @@
 		841A29851C802CBA000BB7DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A29841C802CBA000BB7DB /* CoreGraphics.framework */; };
 		841A29871C802CDB000BB7DB /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A29861C802CDB000BB7DB /* CoreTelephony.framework */; };
 		842E7C711C72C86100661515 /* CalcController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E7C701C72C86100661515 /* CalcController.m */; };
-		842E7C751C72F29100661515 /* ColorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E7C741C72F29100661515 /* ColorController.m */; };
-		842E7C791C732DFC00661515 /* ButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E7C781C732DFC00661515 /* ButtonController.m */; };
-		8449EAD01C71D08B00396D34 /* UIText.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449EACF1C71D08B00396D34 /* UIText.m */; };
-		8449EAD41C71D1B600396D34 /* UISwitchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449EAD31C71D1B600396D34 /* UISwitchController.m */; };
 		8449EAD61C71D4F800396D34 /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8449EAD51C71D4F800396D34 /* My.storyboard */; };
 		8460535B1C7D593800308B49 /* usersList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8460535A1C7D593800308B49 /* usersList.plist */; };
 		8460535E1C7D7C8600308B49 /* MyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8460535D1C7D7C8600308B49 /* MyTabBarController.m */; };
@@ -47,6 +43,11 @@
 		84C7480C1C8E71E3004B49CA /* UISTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7480B1C8E71E3004B49CA /* UISTableViewController.m */; };
 		84CCF25C1C844D7000B2DDB0 /* TouTiaoDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CCF25A1C844D7000B2DDB0 /* TouTiaoDetailsController.m */; };
 		84CCF25D1C844D7000B2DDB0 /* TouTiaoDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */; };
+		84D94B1C1C8FC61700CCC3DD /* ButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B121C8FC61700CCC3DD /* ButtonController.m */; };
+		84D94B1D1C8FC61700CCC3DD /* ColorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B151C8FC61700CCC3DD /* ColorController.m */; };
+		84D94B1E1C8FC61700CCC3DD /* UISwitchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B181C8FC61700CCC3DD /* UISwitchController.m */; };
+		84D94B2F1C8FEBEC00CCC3DD /* UIText.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B2D1C8FEBEC00CCC3DD /* UIText.m */; };
+		84D94B301C8FEBEC00CCC3DD /* UIText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D94B2E1C8FEBEC00CCC3DD /* UIText.xib */; };
 		84E904C01C881E3300B42926 /* UMS_shared@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E904BF1C881E3300B42926 /* UMS_shared@2x.png */; };
 		84E904C41C882E3F00B42926 /* love_video_night.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E904C11C882E3F00B42926 /* love_video_night.png */; };
 		84E904C51C882E3F00B42926 /* new_review_tabbar.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E904C21C882E3F00B42926 /* new_review_tabbar.png */; };
@@ -85,14 +86,6 @@
 		841A29861C802CDB000BB7DB /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		842E7C6F1C72C86100661515 /* CalcController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcController.h; sourceTree = "<group>"; };
 		842E7C701C72C86100661515 /* CalcController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcController.m; sourceTree = "<group>"; };
-		842E7C731C72F29100661515 /* ColorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorController.h; sourceTree = "<group>"; };
-		842E7C741C72F29100661515 /* ColorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorController.m; sourceTree = "<group>"; };
-		842E7C771C732DFC00661515 /* ButtonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonController.h; sourceTree = "<group>"; };
-		842E7C781C732DFC00661515 /* ButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonController.m; sourceTree = "<group>"; };
-		8449EACE1C71D08B00396D34 /* UIText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIText.h; sourceTree = "<group>"; };
-		8449EACF1C71D08B00396D34 /* UIText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIText.m; sourceTree = "<group>"; };
-		8449EAD21C71D1B600396D34 /* UISwitchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISwitchController.h; sourceTree = "<group>"; };
-		8449EAD31C71D1B600396D34 /* UISwitchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISwitchController.m; sourceTree = "<group>"; };
 		8449EAD51C71D4F800396D34 /* My.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
 		8460535A1C7D593800308B49 /* usersList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = usersList.plist; sourceTree = "<group>"; };
 		8460535C1C7D7C8600308B49 /* MyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarController.h; sourceTree = "<group>"; };
@@ -142,6 +135,15 @@
 		84CCF2591C844D7000B2DDB0 /* TouTiaoDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouTiaoDetailsController.h; sourceTree = "<group>"; };
 		84CCF25A1C844D7000B2DDB0 /* TouTiaoDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouTiaoDetailsController.m; sourceTree = "<group>"; };
 		84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouTiaoDetailsController.xib; sourceTree = "<group>"; };
+		84D94B111C8FC61700CCC3DD /* ButtonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonController.h; sourceTree = "<group>"; };
+		84D94B121C8FC61700CCC3DD /* ButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonController.m; sourceTree = "<group>"; };
+		84D94B141C8FC61700CCC3DD /* ColorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorController.h; sourceTree = "<group>"; };
+		84D94B151C8FC61700CCC3DD /* ColorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorController.m; sourceTree = "<group>"; };
+		84D94B171C8FC61700CCC3DD /* UISwitchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISwitchController.h; sourceTree = "<group>"; };
+		84D94B181C8FC61700CCC3DD /* UISwitchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISwitchController.m; sourceTree = "<group>"; };
+		84D94B2C1C8FEBEC00CCC3DD /* UIText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIText.h; sourceTree = "<group>"; };
+		84D94B2D1C8FEBEC00CCC3DD /* UIText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIText.m; sourceTree = "<group>"; };
+		84D94B2E1C8FEBEC00CCC3DD /* UIText.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIText.xib; sourceTree = "<group>"; };
 		84E904BF1C881E3300B42926 /* UMS_shared@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UMS_shared@2x.png"; sourceTree = "<group>"; };
 		84E904C11C882E3F00B42926 /* love_video_night.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = love_video_night.png; sourceTree = "<group>"; };
 		84E904C21C882E3F00B42926 /* new_review_tabbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new_review_tabbar.png; sourceTree = "<group>"; };
@@ -224,42 +226,6 @@
 			path = UICalc;
 			sourceTree = "<group>";
 		};
-		842E7C721C72F16A00661515 /* UIKitDemo */ = {
-			isa = PBXGroup;
-			children = (
-				842E7C731C72F29100661515 /* ColorController.h */,
-				842E7C741C72F29100661515 /* ColorController.m */,
-			);
-			path = UIKitDemo;
-			sourceTree = "<group>";
-		};
-		842E7C761C732DEB00661515 /* ButtonDemo */ = {
-			isa = PBXGroup;
-			children = (
-				842E7C771C732DFC00661515 /* ButtonController.h */,
-				842E7C781C732DFC00661515 /* ButtonController.m */,
-			);
-			path = ButtonDemo;
-			sourceTree = "<group>";
-		};
-		8449EACD1C71D02200396D34 /* UIText */ = {
-			isa = PBXGroup;
-			children = (
-				8449EACE1C71D08B00396D34 /* UIText.h */,
-				8449EACF1C71D08B00396D34 /* UIText.m */,
-			);
-			path = UIText;
-			sourceTree = "<group>";
-		};
-		8449EAD11C71D16300396D34 /* UISwitch */ = {
-			isa = PBXGroup;
-			children = (
-				8449EAD21C71D1B600396D34 /* UISwitchController.h */,
-				8449EAD31C71D1B600396D34 /* UISwitchController.m */,
-			);
-			path = UISwitch;
-			sourceTree = "<group>";
-		};
 		8460536D1C7D8FE100308B49 /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +275,7 @@
 		8479CAD51C7046FC00BD1C6F /* HelloWord */ = {
 			isa = PBXGroup;
 			children = (
+				84D94B0F1C8FC58300CCC3DD /* UIViewDemos */,
 				847268561C8DAE7D0006987D /* TableViewDemo */,
 				840F784C1C8A7A080015E97D /* CGRect */,
 				84A588611C8962F300E58CF0 /* player */,
@@ -317,11 +284,7 @@
 				8460536D1C7D8FE100308B49 /* Image */,
 				84EB06AB1C756F35001E0DF4 /* youmeng */,
 				8486D19C1C74790D00AB319A /* nineG */,
-				842E7C761C732DEB00661515 /* ButtonDemo */,
-				842E7C721C72F16A00661515 /* UIKitDemo */,
 				842E7C6E1C72C86100661515 /* UICalc */,
-				8449EAD11C71D16300396D34 /* UISwitch */,
-				8449EACD1C71D02200396D34 /* UIText */,
 				8479CAD91C7046FC00BD1C6F /* AppDelegate.h */,
 				8479CADA1C7046FC00BD1C6F /* AppDelegate.m */,
 				8479CADC1C7046FC00BD1C6F /* ViewController.h */,
@@ -420,6 +383,54 @@
 				84A5885D1C89528700E58CF0 /* DetialTableViewCell.m */,
 			);
 			path = ImitationTouTiao;
+			sourceTree = "<group>";
+		};
+		84D94B0F1C8FC58300CCC3DD /* UIViewDemos */ = {
+			isa = PBXGroup;
+			children = (
+				84D94B101C8FC61700CCC3DD /* ButtonDemo */,
+				84D94B131C8FC61700CCC3DD /* UIKitDemo */,
+				84D94B161C8FC61700CCC3DD /* UISwitch */,
+				84D94B191C8FC61700CCC3DD /* UIText */,
+			);
+			path = UIViewDemos;
+			sourceTree = "<group>";
+		};
+		84D94B101C8FC61700CCC3DD /* ButtonDemo */ = {
+			isa = PBXGroup;
+			children = (
+				84D94B111C8FC61700CCC3DD /* ButtonController.h */,
+				84D94B121C8FC61700CCC3DD /* ButtonController.m */,
+			);
+			path = ButtonDemo;
+			sourceTree = "<group>";
+		};
+		84D94B131C8FC61700CCC3DD /* UIKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				84D94B141C8FC61700CCC3DD /* ColorController.h */,
+				84D94B151C8FC61700CCC3DD /* ColorController.m */,
+			);
+			path = UIKitDemo;
+			sourceTree = "<group>";
+		};
+		84D94B161C8FC61700CCC3DD /* UISwitch */ = {
+			isa = PBXGroup;
+			children = (
+				84D94B171C8FC61700CCC3DD /* UISwitchController.h */,
+				84D94B181C8FC61700CCC3DD /* UISwitchController.m */,
+			);
+			path = UISwitch;
+			sourceTree = "<group>";
+		};
+		84D94B191C8FC61700CCC3DD /* UIText */ = {
+			isa = PBXGroup;
+			children = (
+				84D94B2C1C8FEBEC00CCC3DD /* UIText.h */,
+				84D94B2D1C8FEBEC00CCC3DD /* UIText.m */,
+				84D94B2E1C8FEBEC00CCC3DD /* UIText.xib */,
+			);
+			path = UIText;
 			sourceTree = "<group>";
 		};
 		84EB06AB1C756F35001E0DF4 /* youmeng */ = {
@@ -563,6 +574,7 @@
 				84E904C51C882E3F00B42926 /* new_review_tabbar.png in Resources */,
 				84A588681C8997E300E58CF0 /* yese.mp3 in Resources */,
 				846053711C7D8FE100308B49 /* UMS_share@2x.png in Resources */,
+				84D94B301C8FEBEC00CCC3DD /* UIText.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +648,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8486D19F1C74790D00AB319A /* NineController.m in Sources */,
+				84D94B1D1C8FC61700CCC3DD /* ColorController.m in Sources */,
 				842E7C711C72C86100661515 /* CalcController.m in Sources */,
 				849196731C7FF3D60038BA6E /* NightController.m in Sources */,
 				846053621C7D7E7900308B49 /* ShareViewController.m in Sources */,
@@ -647,17 +660,16 @@
 				840F784F1C8A7A1C0015E97D /* CGRectViewController.m in Sources */,
 				8460535E1C7D7C8600308B49 /* MyTabBarController.m in Sources */,
 				848BD85C1C858FB3008D3641 /* BottomView.m in Sources */,
-				8449EAD01C71D08B00396D34 /* UIText.m in Sources */,
 				84E904D11C885D8C00B42926 /* DetialEntity.m in Sources */,
-				842E7C751C72F29100661515 /* ColorController.m in Sources */,
+				84D94B1C1C8FC61700CCC3DD /* ButtonController.m in Sources */,
 				846053671C7D7E9A00308B49 /* LoginViewController.m in Sources */,
-				842E7C791C732DFC00661515 /* ButtonController.m in Sources */,
 				84E904D41C886A1900B42926 /* DetialShowCountView.m in Sources */,
-				8449EAD41C71D1B600396D34 /* UISwitchController.m in Sources */,
 				84A588651C89634600E58CF0 /* Mp3ViewController.m in Sources */,
 				8479CAD81C7046FC00BD1C6F /* main.m in Sources */,
 				84A5885F1C89528700E58CF0 /* DetialTableViewCell.m in Sources */,
+				84D94B2F1C8FEBEC00CCC3DD /* UIText.m in Sources */,
 				848F80BB1C87194500418C69 /* SocialGroupView.m in Sources */,
+				84D94B1E1C8FC61700CCC3DD /* UISwitchController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

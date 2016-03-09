@@ -8,6 +8,8 @@
 
 #import "UISTableViewController.h"
 
+@class UIText;
+
 @interface UISTableViewController ()
 
 @property(nonatomic,strong) NSMutableArray *title;
@@ -16,7 +18,10 @@
 
 @property(nonatomic,strong) NSMutableDictionary *dict;
 
+
 -(void) loadData;
+
+-(void) switchUI:(UIViewType) type;
 
 @end
 
@@ -27,6 +32,7 @@
 @synthesize msg;
 
 @synthesize dict;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,13 +52,11 @@
 
 -(void)loadData{
     title = [NSMutableArray arrayWithCapacity:0];
-    [title addObject:@""];
     [title addObject:@"NSLog打印"];
     [title addObject:@""];
     [dict setObject:title forKey:@"OC语法基础"];
     
     title = [NSMutableArray arrayWithCapacity:0];
-    [title addObject:@""];
     [title addObject:@"UILabel控件"];
     [title addObject:@"UITextView控件"];
     [title addObject:@"UITextFilde控件"];
@@ -86,10 +90,11 @@
     return nil;
 }
 
+
 //获取某一行内容
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *cellIdetifier = @"cell";
+    static NSString *cellIdetifier = @"CellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdetifier];
     
     if (cell == nil) {
@@ -101,36 +106,29 @@
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
         cell.textLabel.transform = CGAffineTransformMakeRotation(M_PI*2);//设置文本内容旋转
         cell.textLabel.frame = CGRectMake(10, CGRectGetMinY(cell.textLabel.frame), CGRectGetWidth(cell.textLabel.frame), CGRectGetHeight(cell.textLabel.frame));
-        
     }
     
+    NSString *string = (NSString *)[dict objectForKey:dict.allKeys[indexPath.section]][indexPath.row];
+    [cell.textLabel setText:string];
     
-    static NSInteger current = -1;
     
-    if (current == indexPath.section) {
-        cell.textLabel.text = (NSString *)[dict objectForKey:dict.allKeys[indexPath.section]][indexPath.row];
-        
-    }else{
-        NSString *string2 = (NSString *)dict.allKeys[indexPath.section];
-        NSString *string1 =(NSString *)[dict objectForKey:dict.allKeys[indexPath.section]][indexPath.row];
-        cell.textLabel.text = [NSString stringWithFormat:@"%@%@",string2,string1];
-    }
-    current = indexPath.section;
-    //    cell.textLabel.text = (NSString *)[dict objectForKey:dict.allKeys[indexPath.section]][indexPath.row];
-    NSLog(@"-----section-----%ld",indexPath.section);
     
     return cell;
 }
+//
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+//
+////    NSLog(@"------##---%@------##------",cell.textLabel.text);
+//
+//}
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSString *str = [NSString stringWithFormat:@"你选择的是第%ld行",indexPath.row+1];
-    
     NSString *titleContent = dict.allKeys[indexPath.section];
     NSString *msgContent = [dict objectForKey:dict.allKeys[indexPath.section]][indexPath.row];
+    
     if ([msgContent isEqualToString:@""] && msgContent.length == 0) {
-        tableView.
         return;
     }
     
@@ -141,6 +139,7 @@
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
                                                               NSLog(@"确定了");
+                                                              [self switchUI:UILabelType];
                                                           }];
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction* action){
         NSLog(@"取消了");
@@ -151,6 +150,41 @@
     [self presentViewController:alert animated:YES completion:nil];
     
 }
+
+-(void)switchUI:(UIViewType) type{
+    switch (type) {
+        case UILabelType:
+//             [self showDetailViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil]  sender:nil];
+
+            [self showViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] sender:nil];
+            
+//            [self presentViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] animated:YES completion:nil];
+             NSLog(@"确定了---");
+            
+//            [self.navigationController pushViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] animated:YES];
+            
+//            [self.navigationController presentViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] animated:YES completion:nil];
+            
+            break;
+            
+        case UIBtnType:
+            
+            break;
+            
+        case UITextViewType:
+            
+            break;
+            
+            
+        case UITextFildType:
+            
+            break;
+            
+        default:
+            break;
+    }
+}
+
 
 
 /*

@@ -64,6 +64,7 @@
     
     //初始化播放控制
      _playSlider = [[UISlider alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(button4.frame)+10.0, 200, 20)];
+    
     [_playSlider addTarget:self action:@selector(progressChange:)
             forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_playSlider];

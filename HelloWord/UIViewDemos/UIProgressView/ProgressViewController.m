@@ -10,6 +10,8 @@
 
 @interface ProgressViewController ()
 
+@property (weak, nonatomic) IBOutlet UIProgressView *progress;
+
 @end
 
 @implementation ProgressViewController

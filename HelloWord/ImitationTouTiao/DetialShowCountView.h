@@ -16,7 +16,7 @@
 
 @interface DetialShowCountView : UIView
 
-@property(nonatomic,strong) id<DetialShowCountViewDelegate> deletage;
+@property(nonatomic,weak) id<DetialShowCountViewDelegate> deletage;
 
 - (void) setImageViewForImage:(UIImage *) image;
 

@@ -14,6 +14,8 @@
 
 #import "DetialEntity.h"
 
+#import "UIAcSheetView.h"
+
 #define RGBA(R/*红*/, G/*绿*/, B/*蓝*/, A/*透明*/) \
 
 #define UIColorFromRGB(rgbValue) [UIColor \
@@ -66,7 +68,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 -(void)onClickWritComment{
     NSLog(@"写评论。。。");
-    
+    UIAcSheetView *actionSheet = [[UIAcSheetView  alloc] initSheetWithCustomView:[[UIView alloc] initWithFrame:CGRectMake(0, 0, 10, 50)]];
+    [actionSheet show];
 }
 
 -(void)onClickShowComment{

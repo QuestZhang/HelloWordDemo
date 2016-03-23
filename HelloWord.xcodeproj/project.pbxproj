@@ -43,6 +43,7 @@
 		84C7480C1C8E71E3004B49CA /* UISTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7480B1C8E71E3004B49CA /* UISTableViewController.m */; };
 		84CCF25C1C844D7000B2DDB0 /* TouTiaoDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CCF25A1C844D7000B2DDB0 /* TouTiaoDetailsController.m */; };
 		84CCF25D1C844D7000B2DDB0 /* TouTiaoDetailsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */; };
+		84D0061C1CA2808B005195DD /* UIAcSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D0061B1CA2808B005195DD /* UIAcSheetView.m */; };
 		84D94B1C1C8FC61700CCC3DD /* ButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B121C8FC61700CCC3DD /* ButtonController.m */; };
 		84D94B2F1C8FEBEC00CCC3DD /* UIText.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D94B2D1C8FEBEC00CCC3DD /* UIText.m */; };
 		84D94B301C8FEBEC00CCC3DD /* UIText.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D94B2E1C8FEBEC00CCC3DD /* UIText.xib */; };
@@ -139,6 +140,8 @@
 		84CCF2591C844D7000B2DDB0 /* TouTiaoDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouTiaoDetailsController.h; sourceTree = "<group>"; };
 		84CCF25A1C844D7000B2DDB0 /* TouTiaoDetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TouTiaoDetailsController.m; sourceTree = "<group>"; };
 		84CCF25B1C844D7000B2DDB0 /* TouTiaoDetailsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TouTiaoDetailsController.xib; sourceTree = "<group>"; };
+		84D0061A1CA2808B005195DD /* UIAcSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAcSheetView.h; sourceTree = "<group>"; };
+		84D0061B1CA2808B005195DD /* UIAcSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAcSheetView.m; sourceTree = "<group>"; };
 		84D94B111C8FC61700CCC3DD /* ButtonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonController.h; sourceTree = "<group>"; };
 		84D94B121C8FC61700CCC3DD /* ButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonController.m; sourceTree = "<group>"; };
 		84D94B2C1C8FEBEC00CCC3DD /* UIText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIText.h; sourceTree = "<group>"; };
@@ -394,9 +397,19 @@
 			path = ImitationTouTiao;
 			sourceTree = "<group>";
 		};
+		84D006191CA2807C005195DD /* UIActionSheetView */ = {
+			isa = PBXGroup;
+			children = (
+				84D0061A1CA2808B005195DD /* UIAcSheetView.h */,
+				84D0061B1CA2808B005195DD /* UIAcSheetView.m */,
+			);
+			path = UIActionSheetView;
+			sourceTree = "<group>";
+		};
 		84D94B0F1C8FC58300CCC3DD /* UIViewDemos */ = {
 			isa = PBXGroup;
 			children = (
+				84D006191CA2807C005195DD /* UIActionSheetView */,
 				84D94B431C9036DE00CCC3DD /* UIProgressView */,
 				84D94B3D1C9035E900CCC3DD /* UIViewDemo */,
 				84D94B101C8FC61700CCC3DD /* ButtonDemo */,
@@ -540,7 +553,7 @@
 				TargetAttributes = {
 					8479CAD21C7046FC00BD1C6F = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = X27QJFV6JC;
+						DevelopmentTeam = 37J5KGC3DN;
 					};
 					8479CAEB1C7046FC00BD1C6F = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -687,6 +700,7 @@
 				8460535E1C7D7C8600308B49 /* MyTabBarController.m in Sources */,
 				84D94B411C9035E900CCC3DD /* UIViewViewController.m in Sources */,
 				848BD85C1C858FB3008D3641 /* BottomView.m in Sources */,
+				84D0061C1CA2808B005195DD /* UIAcSheetView.m in Sources */,
 				84E904D11C885D8C00B42926 /* DetialEntity.m in Sources */,
 				84D94B1C1C8FC61700CCC3DD /* ButtonController.m in Sources */,
 				846053671C7D7E9A00308B49 /* LoginViewController.m in Sources */,

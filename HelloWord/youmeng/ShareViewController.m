@@ -26,9 +26,9 @@
     // Do any additional setup after loading the view from its nib.
     self.view.dk_backgroundColorPicker = DKColorWithColors([UIColor redColor], [UIColor blackColor]);
     [self.shareBtn dk_setTitleColorPicker:DKColorWithColors([UIColor whiteColor], [UIColor yellowColor]) forState:UIControlStateNormal];
-    [self presentViewController:self animated:YES completion:^{
-        
-    }];
+//    [self presentViewController:self animated:YES completion:^{
+//        
+//    }];
 //    [self popoverPresentationController];
 //    [self dismissViewControllerAnimated:YES completion:nil];
 //    [self.navigationController pushViewController:newVC animated:YES];

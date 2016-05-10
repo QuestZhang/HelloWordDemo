@@ -15,7 +15,11 @@
 #import "Mp3ViewController.h"
 #import "UISTableViewController.h"
 #import "UIText.h"
-
+#import "WebViewController.h"
+#import "GallerViewController.h"
+#import "GalleryViewController.h"
+#import "CollectionViewController.h"
+#import "MYViewController.h"
 
 @interface MyTabBarController ()
 
@@ -30,7 +34,7 @@
      初始化方法名必须与文件名相同
      bundle：nil
      */
-    
+    self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
     ShareViewController *share = [[ShareViewController alloc] initWithNibName:@"ShareViewController" bundle:nil];
     share.title = @"分享";
     share.tabBarItem.image = [UIImage imageNamed:@"UMS_share"];
@@ -43,7 +47,7 @@
     night.title = @"夜白";
     night.tabBarItem.image = [UIImage imageNamed:@"UMS_account"];
     
-    TouTiaoDetailsController * toutiao = [[TouTiaoDetailsController alloc] initWithNibName:@"TouTiaoDetailsController" bundle:nil];
+    TouTiaoDetailsController * toutiao = [[TouTiaoDetailsController alloc] init];
     toutiao.title = @"详情";
     toutiao.tabBarItem.image = [UIImage imageNamed:@"UMS_share"];
     
@@ -59,13 +63,33 @@
     [uiText setTitle:@"Text"];
     [uiText.tabBarItem setImage:[UIImage imageNamed:@"UMS_account"]];
     
+    WebViewController* webView = [[WebViewController alloc] init];
+    [webView setTitle:@"UIWebView"];
+    [webView.tabBarItem setImage:[UIImage imageNamed:@"UMS_share"]];
+    
+    GallerViewController* gallerView = [[GallerViewController alloc] init];
+    [gallerView setTitle:@"画廊"];
+    [gallerView.tabBarItem setImage:[UIImage imageNamed:@"UMS_account"]];
+    
+    GalleryViewController* galleryView = [[GalleryViewController alloc] init];
+    [galleryView setTitle:@"画廊2"];
+    [galleryView.tabBarItem setImage:[UIImage imageNamed:@"UMS_account"]];
+    
+    CollectionViewController* collection = [[CollectionViewController alloc] init];
+    [collection setTitle:@"collection"];
+    [collection.tabBarItem setImage:[UIImage imageNamed:@"UMS_account"]];
+    
+    MYViewController* myview = [[MYViewController alloc] init];
+    [myview setTitle:@"myview"];
+    [myview.tabBarItem setImage:[UIImage imageNamed:@"UMS_account"]];
+    
 //    [self presentViewController:uis animated:YES completion:nil];
 //    self showDetailViewController: sender:<#(nullable id)#>
     
 //    push -> popTo  presentV.. ->  dismis
     
     
-    [self setViewControllers:[NSArray arrayWithObjects:uis,toutiao,login,night,share,nil]];
+    [self setViewControllers:[NSArray arrayWithObjects:myview,toutiao,login,night,share,nil]];
     [super viewDidLoad];
     
 }

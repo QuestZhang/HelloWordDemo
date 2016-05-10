@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "BaseViewController.h"
 #import "BottomView.h"
 
-@interface TouTiaoDetailsController : UIViewController<BottomViewDelegate,UITableViewDelegate>
+@interface TouTiaoDetailsController : BaseViewController<BottomViewDelegate,UITableViewDelegate>
 
 @end

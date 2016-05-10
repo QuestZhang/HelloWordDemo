@@ -53,11 +53,13 @@
     CGFloat screemWidth = [[UIScreen mainScreen] bounds].size.width;
     CGFloat screemHeight = [[UIScreen mainScreen] bounds].size.height;
     
-    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, 0, screemWidth, screemHeight)];
+    MyTabBarController *myTabBar = [[MyTabBarController alloc] init];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:myTabBar];
+    
+    self.window = [[UIWindow alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(nav.navigationBar.frame), screemWidth, screemHeight- CGRectGetMaxY(nav.navigationBar.frame))];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    MyTabBarController *myTabBar = [[MyTabBarController alloc] init];
     self.window.rootViewController = myTabBar;
     
     // end

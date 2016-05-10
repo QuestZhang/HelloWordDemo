@@ -28,9 +28,7 @@
 //修改父控件为红色
 - (IBAction)changeFatherViewColor:(UIButton *)sender {
     UIView* fatherView = sender.superview;
-    
     fatherView.backgroundColor = [UIColor redColor];
-    
 }
 //修改父控件为随机颜色
 -(IBAction)changeFatherColorRandom:(UIButton *)sender{
@@ -46,7 +44,6 @@
 
 //创建一个View出来并且添加到白色的View中；
 - (IBAction)createView:(UIButton *)sender {
-    
     
     UIView *createrView = [[UIView alloc] init];
     [self.withView addSubview:createrView];//为某一个控件添加子控件

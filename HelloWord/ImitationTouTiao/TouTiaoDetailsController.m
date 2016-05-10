@@ -7,13 +7,9 @@
 //
 
 #import "DKNightVersion.h"
-
 #import "TouTiaoDetailsController.h"
-
 #import "DetialTabView.h"
-
 #import "DetialEntity.h"
-
 #import "UIAcSheetView.h"
 
 #define RGBA(R/*红*/, G/*绿*/, B/*蓝*/, A/*透明*/) \
@@ -27,38 +23,47 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 @interface TouTiaoDetailsController ()
 
 @property(strong,nonatomic) BottomView *bottomView;
-
 @property(nonatomic,strong) DetialTabView *tableView;
-
 @property(nonatomic,strong) NSMutableArray *data;
-
 -(void) initData:(NSUInteger) count;
 
 @end
 
 @implementation TouTiaoDetailsController
 
+@synthesize bottomView;
+@synthesize tableView;
+@synthesize data;
+
+-(void)loadView{
+    [super loadView];
+}
+
+-(void)reloadInputViews{
+    [super reloadInputViews];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     CGFloat width = [[UIScreen mainScreen] bounds].size.width;
     CGFloat height = [[UIScreen mainScreen] bounds].size.height;
-    _bottomView = [[BottomView alloc] initWithFrame:CGRectMake(0, height-97, width, 48)];
-    _bottomView.backgroundColor = UIColorFromRGB(0xF4F5F6);
-    _bottomView.bottomViewDelegate = self;
+    bottomView = [[BottomView alloc] initWithFrame:CGRectMake(0, height-97, width, 48)];
+    bottomView.backgroundColor = UIColorFromRGB(0xF4F5F6);
+    bottomView.bottomViewDelegate = self;
     
-    CGFloat tableViewY = CGRectGetMinY(_bottomView.frame);
-    
-    _tableView = [[DetialTabView alloc] initWithFrame:CGRectMake(0, 0, width, tableViewY)];
-    _tableView.rowHeight = 100;
-    _data = [[NSMutableArray alloc] initWithCapacity:0];
-    for (int i =0; i<20; i++) {
+    CGFloat tableViewY = CGRectGetMinY(bottomView.frame);
+    CGFloat maxY = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    tableView = [[DetialTabView alloc] initWithFrame:CGRectMake(0, maxY, width, tableViewY)];
+    tableView.rowHeight = 100;
+    data = [[NSMutableArray alloc] initWithCapacity:0];
+    for (int i =0; i<100; i++) {
         [self initData:i];
     }
-//    [_tableView.data insertObjects:_data atIndexes:[NSIndexSet indexSetWithIndex:1]];
-    //    _tableView.data;
+//    [tableView.data insertObjects:data atIndexes:[NSIndexSet indexSetWithIndex:1]];
+    //    tableView.data;
     
-    [self.view addSubview:_bottomView];
-    [self.view addSubview:_tableView];
+    [self.view addSubview:bottomView];
+    [self.view addSubview:tableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,7 +99,38 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
     [entity setName:[NSString stringWithFormat:@"张文强%ld",count]];
     [entity setTime:@"一小时前"];
     [entity setContent:@"朝鲜真是作死"];
-    [_tableView.data addObject:entity];
+    [tableView.data addObject:entity];
+}
+
+- (void)setNavigationbar{
+    
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:self];
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    
+    UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, screenRect.size.width, 44)];
+    
+    //nav.tintColor = [UIColor grayColor];
+    
+    //创建UINavigationItem
+    
+    UINavigationItem * navigationBarTitle = [[UINavigationItem alloc] initWithTitle:@"创建UINavigationBar"];
+    
+    //[nav pushNavigationItem:navigationBarTitle animated:YES];
+    
+    [self.view addSubview: navigationBar];
+    
+    //创建UIBarButton 可根据需要选择适合自己的样式
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(navigationBackButton:)];
+    
+    //设置barbutton
+    navigationBarTitle.leftBarButtonItem = item;
+    
+    [navigationBar setItems:[NSArray arrayWithObject: navigationBarTitle]];
+    
+    
+    
 }
 
 @end

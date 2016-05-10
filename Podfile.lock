@@ -25,6 +25,11 @@ PODS:
     - DKNightVersion/Core
   - Masonry (0.6.4)
   - MJRefresh (3.0.8)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
@@ -35,6 +40,7 @@ DEPENDENCIES:
   - DKNightVersion (~> 1.2)
   - Masonry (~> 0.6.4)
   - MJRefresh (~> 3.0.4)
+  - NJKWebViewProgress (~> 0.2.3)
   - SDWebImage (~> 3.7.3)
   - UMengSocial (~> 5.0)
 
@@ -43,6 +49,7 @@ SPEC CHECKSUMS:
   DKNightVersion: 7c8cf41002c6dfa8db3ca71274bf1a9aaeaa4ff7
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MJRefresh: fafde8f18f4afd66b434331a9beb67a6c0264056
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   UMengSocial: 48b67179c492a8cf7803fbb0438b8f55432e2fc1
 

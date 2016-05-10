@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIText.h"
-#import "UISwitchViewController.h"
-#import "UIViewViewController.h"
+#import "BaseViewController.h"
 
 typedef enum{
     
@@ -18,7 +16,8 @@ typedef enum{
     UITextViewType,
     UITextFildType,
     UIViewViewType,
-    UISwitchType
+    UISwitchType,
+    UIWebViewType
     
 }UIViewType;
 

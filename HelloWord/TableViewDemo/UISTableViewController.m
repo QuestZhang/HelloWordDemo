@@ -7,20 +7,20 @@
 //
 
 #import "UISTableViewController.h"
+#import "UIText.h"
+#import "UISwitchViewController.h"
+#import "UIViewViewController.h"
+#import "WebViewController.h"
 
 @interface UISTableViewController ()
 
 @property(nonatomic,strong) NSMutableArray *title;
-
-@property(nonatomic,strong) NSMutableArray *msg;
-
-@property(nonatomic,strong) NSMutableDictionary *dict;
+@property(nonatomic,strong) NSMutableArray *message;
+@property(nonatomic,strong) NSMutableDictionary *dictionary;
 
 
 -(void) loadData;
-
 -(void) switchUI:(UIViewType) type;
-
 -(UIViewType)getType:(NSString *)name;
 
 @end
@@ -28,10 +28,8 @@
 @implementation UISTableViewController
 
 @synthesize title;
-
-@synthesize msg;
-
-@synthesize dict;
+@synthesize message;
+@synthesize dictionary;
 
 
 - (void)viewDidLoad {
@@ -43,10 +41,12 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    // self.tableView.transform = CGAffineTransformMakeRotation(M_PI/-2); //旋转滑动方向
+    self.tableView.transform = CGAffineTransformMakeRotation(M_PI/-2); //旋转滑动方向
     self.tableView.rowHeight = 60.0;
     
-    dict = [NSMutableDictionary dictionaryWithCapacity:0];
+    [self setSeparatorWithTableView:self.tableView edgeInsets:UIEdgeInsetsZero];
+    
+    dictionary = [NSMutableDictionary dictionaryWithCapacity:0];
     [self loadData];
 }
 
@@ -54,7 +54,7 @@
     title = [NSMutableArray arrayWithCapacity:0];
     [title addObject:@"NSLog打印"];
     [title addObject:@""];
-    [dict setObject:title forKey:@"OC语法基础"];
+    [dictionary setObject:title forKey:@"OC语法基础"];
     
     title = [NSMutableArray arrayWithCapacity:0];
     [title addObject:@"UILabel控件"];
@@ -63,10 +63,30 @@
     [title addObject:@"UIButton控件"];
     [title addObject:@"UISwitch控件"];
     [title addObject:@"UIView控件"];
+    [title addObject:@"UIWebView控件"];
     [title addObject:@""];
-    [dict setObject:title forKey:@"IOS的UI控件"];
+    [dictionary setObject:title forKey:@"IOS的UI控件"];
+}
+
+//设置分割线
+-(void)setSeparatorWithTableView:(UITableView*)tableView edgeInsets:(UIEdgeInsets) edgeInsets{
+    if ([tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+        tableView.layoutMargins = edgeInsets;
+    }
     
-    
+    if ([tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        tableView.separatorInset = edgeInsets;
+    }
+}
+
+//设置分割线
+-(void)setSeparatorWithCell:(UITableViewCell*)cell edgeInsets:(UIEdgeInsets) edgeInsets{
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        cell.layoutMargins = edgeInsets;
+    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        cell.separatorInset = edgeInsets;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,14 +98,16 @@
 
 //表示在这TableView里的块数量
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return dict.allKeys.count;
+    return dictionary.allKeys.count;
 }
 
 //表示在这个部分里的行的数量
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return ((NSArray *)[dict objectForKey:dict.allKeys[section]]).count;
+    return ((NSArray *)[dictionary objectForKey:dictionary.allKeys[section]]).count;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [UIScreen mainScreen].bounds.size.width;
 }
 
 - (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView{
@@ -105,29 +127,28 @@
         cell.textLabel.textAlignment = NSTextAlignmentLeft;
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
-        cell.textLabel.transform = CGAffineTransformMakeRotation(M_PI*2);//设置文本内容旋转
+        cell.textLabel.transform = CGAffineTransformMakeRotation(M_PI/2);//设置cell内容旋转
         cell.textLabel.frame = CGRectMake(10, CGRectGetMinY(cell.textLabel.frame), CGRectGetWidth(cell.textLabel.frame), CGRectGetHeight(cell.textLabel.frame));
     }
     
-    NSString *string = (NSString *)[dict objectForKey:dict.allKeys[indexPath.section]][indexPath.row];
+    [self setSeparatorWithCell:cell edgeInsets:UIEdgeInsetsZero];
+    
+    NSString *string = (NSString *)[dictionary objectForKey:dictionary.allKeys[indexPath.section]][indexPath.row];
     [cell.textLabel setText:string];
-    
-    
     
     return cell;
 }
+
 //
 //- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
-//
-////    NSLog(@"------##---%@------##------",cell.textLabel.text);
-//
+//    NSLog(@"------##---%@------##------",cell.textLabel.text);
 //}
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSString *titleContent = dict.allKeys[indexPath.section];
-    NSString *msgContent = [dict objectForKey:dict.allKeys[indexPath.section]][indexPath.row];
+    NSString *titleContent = dictionary.allKeys[indexPath.section];
+    NSString *msgContent = [dictionary objectForKey:dictionary.allKeys[indexPath.section]][indexPath.row];
     
     if ([msgContent isEqualToString:@""] && msgContent.length == 0) {
         return;
@@ -143,8 +164,8 @@
                                                               NSString *name = [msgContent substringWithRange:NSMakeRange(0, msgContent.length-2)];
                                                               [self switchUI:[self getType:name]];
                                                               unichar ch = [name characterAtIndex:1];
-                                                              NSLog(@"-----###---%@-%c-",name,ch);
-//                                                              [name integerValue];//字符串转成Integer
+                                                              NSLog(@"---name:%@---char:%c-",name,ch);
+                                                              //[name integerValue];//字符串转成Integer
                                                           }];
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction* action){
         NSLog(@"取消了");
@@ -167,24 +188,40 @@
         return UISwitchType;
     }else if ([@"UIView" isEqualToString:name]){
         return UIViewViewType;
+    }else if ([@"UIWebView" isEqualToString:name]){
+        return UIWebViewType;
     }
     
     return -1;
 }
 
 -(void)switchUI:(UIViewType) type{
+    //*********** ViewController 之间的跳转 ***************
+    //[self showViewController:<#(nonnull UIViewController *)#> sender:<#(nullable id)#>];
+    //[self.navigationController showViewController:<#(nonnull UIViewController *)#> sender:<#(nullable id)#>];
+    //[self showDetailViewController:<#(nonnull UIViewController *)#> sender:<#(nullable id)#>];
+    //[self dismissViewControllerAnimated:<#(BOOL)#> completion:<#^(void)completion#>];
+    
+    //[self.navigationController pushViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#>];
+    //[self.navigationController popViewControllerAnimated:<#(BOOL)#>];
+    
+    //[self presentViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#> completion:<#^(void)completion#>];
+    //[self.navigationController presentViewController:<#(nonnull UIViewController *)#> animated:<#(BOOL)#> completion:<#^(void)completion#>];
+    //[self dismissViewControllerAnimated:<#(BOOL)#> completion:<#^(void)completion#>];
+    //[self.navigationController dismissViewControllerAnimated:<#(BOOL)#> completion:<#^(void)completion#>];
+    
     switch (type) {
         case UILabelType:
-//             [self showDetailViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil]  sender:nil];
+             //[self showDetailViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil]  sender:nil];
 
-            [self showViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] sender:nil];
+            [self.navigationController showViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] sender:nil];
             
-//            [self presentViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] animated:YES completion:nil];
+            //[self presentViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] animated:YES completion:nil];
              NSLog(@"---确定了---");
             
-//            [self.navigationController pushViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] animated:YES];
+            //[self.navigationController pushViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] animated:YES];
             
-//            [self.navigationController presentViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] animated:YES completion:nil];
+            //[self.navigationController presentViewController:[[UIText alloc] initWithNibName:@"UIText" bundle:nil] animated:YES completion:nil];
             
             break;
             
@@ -206,7 +243,14 @@
             break;
             
         case UIViewViewType:
+            
             [self showViewController:[[UIViewViewController alloc] initWithNibName:@"UIViewViewController" bundle:nil] sender:nil];
+            break;
+            
+        case UIWebViewType:{
+            WebViewController* webView = [[WebViewController alloc] init];
+            [self.navigationController pushViewController:webView animated:YES];
+        }
             break;
 
             

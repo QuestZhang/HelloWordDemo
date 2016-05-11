@@ -44,9 +44,10 @@
 
 -(void)execute{
     NHAttentionItemView* itemView = nil;
+    CGFloat itemW = self.contentView.frame.size.width;
     for (NSString* tag in self.tags) {
         NSInteger i = [tag integerValue];
-        CGRect frame = CGRectMake((i-1<0?0:i-1)*self.selfW/3, 0, self.selfW/3-2.5, ItmeH);
+        CGRect frame = CGRectMake((i-1<0?0:i-1)*itemW/self.tags.count, 0, itemW/self.tags.count-2.5, ItmeH);
         itemView = [self MakeItemViewWithFrame:frame tag:i];
         [self.contentView addSubview:itemView];
     }

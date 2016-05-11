@@ -162,7 +162,7 @@
         _attention = [UIButton buttonWithType:UIButtonTypeCustom];
         _attention.frame = frame;
         _attention.center = CGPointMake(self.selfW/2, _attention.center.y);
-        _attention.titleLabel.font = [UIFont systemFontOfSize:15];
+        _attention.titleLabel.font = [UIFont systemFontOfSize:12];
     }
     return _attention;
 }

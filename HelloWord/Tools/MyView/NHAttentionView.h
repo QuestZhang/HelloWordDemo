@@ -14,12 +14,16 @@
 
 @protocol NHAttentionViewDeletage <NSObject>
 
+//更多按钮点击事件
 -(void)onClickOfMore:(UIButton*)moreButton;
 
+//点解整个item 返回itemView 与返回Model同时执行
 -(void)onClickOfItem:(NHAttentionItemView*)item;
 
+//点击这个item 返回Item的Model 与返回ItemView同时执行
 -(void)onClickItemForModel:(NHAttentionModel*)model;
 
+//点击关注按钮返回对应tag
 -(void)onClickOfAttentionTag:(NSInteger)tag;
 
 @end

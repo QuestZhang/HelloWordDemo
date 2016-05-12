@@ -20,10 +20,14 @@
 
 @property(nonatomic,strong) NSString* buttonTitle;
 
-@property(nonatomic,assign)NSUInteger buttonTitleColor;
+@property(nonatomic,assign) NSUInteger buttonTitleColor;
+
+@property(nonatomic,strong) NSDictionary* otherData;
 
 -(instancetype)initWithTitle:(NSString*)title detailTitle:(NSString*)detailTitle image:(NSString*)image button:(NSString*)button;
 
 -(instancetype)initWithTitle:(NSString*)title detailTitle:(NSString*)detailTitle image:(NSString*)image button:(NSString*)button buttonTitle:(NSString*)buttonTitle buttonTitleColor:(NSUInteger)buttonTitleColor;
+
+-(instancetype)initWithTitle:(NSString*)title detailTitle:(NSString*)detailTitle image:(NSString*)image button:(NSString*)button buttonTitle:(NSString*)buttonTitle buttonTitleColor:(NSUInteger)buttonTitleColor otherData:(NSDictionary*)otherData;
 
 @end

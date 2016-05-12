@@ -138,7 +138,7 @@
         _titleButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _titleButton.frame = frame;
         _titleButton.center = CGPointMake(self.selfW/2, titleH/2);
-        //_titleButton.titleEdgeInsets = UIEdgeInsetsMake(10, 5, 10, 0);
+        _titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
         //_titleButton.imageEdgeInsets = UIEdgeInsetsMake(10, 0, 10, 0);
         _titleButton.titleLabel.font = [UIFont systemFontOfSize:FontSize];
         [_titleButton dk_setTitleColorPicker:DKColorWithRGB(0xE22222,0x000000) forState:UIControlStateNormal];

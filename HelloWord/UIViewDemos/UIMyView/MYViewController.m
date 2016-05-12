@@ -29,7 +29,7 @@
     [super viewDidLoad];
     self.attentionView.tags = self.tags;
     self.attentionView.data = self.data;
-    [self.attentionView setTitle:@"农红广场" image:@"农红底部-按下状态"];
+    [self.attentionView setTitle:@"农红广场" image:@"农红秀场"];
     [self.attentionView setMoreTitle:@"更多" moreImage:@"更多"];
     [self.attentionView execute];
     [self.view addSubview:self.attentionView];
@@ -44,20 +44,24 @@
     //[self.view addSubview:itemView];
 }
 
+//更多按钮点击事件
 -(void)onClickOfMore:(UIButton*)moreButton{
     NSLog(@"onClickOfMore");
 }
 
+//点解整个item 返回itemView 与返回Model同时执行
 -(void)onClickOfItem:(NHAttentionItemView*)item{
- NSLog(@"onClickOfItem%ld",item.tag);
+    NSLog(@"onClickOfItem%ld",item.tag);
 }
 
+//点击这个item 返回Item的Model 与返回ItemView同时执行
 -(void)onClickItemForModel:(NHAttentionModel *)model{
     NSLog(@"%@",model.description);
 }
 
+//点击关注按钮返回对应tag
 -(void)onClickOfAttentionTag:(NSInteger)tag{
- NSLog(@"onClickOfAttentionTag%ld",tag);
+    NSLog(@"onClickOfAttentionTag%ld",tag);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,7 +95,7 @@
         _model_0.title = @"快乐小苹果";
         _model_0.detailTitle = @"做最专业能手";
         _model_0.image = @"http://pic1.win4000.com/pic/b/9b/71f0732170.jpg";
-        _model_0.button  = @"关注";
+        _model_0.button  = @"关注框";
         _model_0.buttonTitle = @"关注";
         _model_0.buttonTitleColor = 0xE22222;
     }
@@ -104,7 +108,7 @@
         _model_1.title = @"快乐小香蕉";
         _model_1.detailTitle = @"做最专业操手";
         _model_1.image = @"http://a.hiphotos.baidu.com/image/pic/item/f9dcd100baa1cd11daf25f19bc12c8fcc3ce2d46.jpg";
-        _model_1.button  = @"关注";
+        _model_1.button  = @"关注框";
         _model_1.buttonTitle = @"关注";
         _model_1.buttonTitleColor = 0xE22222;
     }
@@ -117,7 +121,7 @@
         _model_2.title = @"快乐小二B";
         _model_2.detailTitle = @"做最专业喜剧人";
         _model_2.image = @"http://h.hiphotos.baidu.com/image/pic/item/dbb44aed2e738bd4ec4f29e6a58b87d6267ff9ff.jpg";
-        _model_2.button  = @"关注";
+        _model_2.button  = @"关注框";
         _model_2.buttonTitle = @"关注";
         _model_2.buttonTitleColor = 0xE22222;
     }

@@ -59,6 +59,10 @@
 		84A7C6CD1CE1C6820056BE57 /* 农红底部-按下状态@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7C6CB1CE1C6820056BE57 /* 农红底部-按下状态@3x.png */; };
 		84A7C6D01CE1C6910056BE57 /* 更多@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7C6CE1CE1C6910056BE57 /* 更多@2x.png */; };
 		84A7C6D11CE1C6910056BE57 /* 更多@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7C6CF1CE1C6910056BE57 /* 更多@3x.png */; };
+		84B652B31CE35E3A00A33194 /* 关注框@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B652AF1CE35E3A00A33194 /* 关注框@2x.png */; };
+		84B652B41CE35E3A00A33194 /* 关注框@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B652B01CE35E3A00A33194 /* 关注框@3x.png */; };
+		84B652B51CE35E3A00A33194 /* 农红秀场@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B652B11CE35E3A00A33194 /* 农红秀场@2x.png */; };
+		84B652B61CE35E3A00A33194 /* 农红秀场@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84B652B21CE35E3A00A33194 /* 农红秀场@3x.png */; };
 		84C7480C1C8E71E3004B49CA /* UISTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C7480B1C8E71E3004B49CA /* UISTableViewController.m */; };
 		84CCF25C1C844D7000B2DDB0 /* TouTiaoDetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CCF25A1C844D7000B2DDB0 /* TouTiaoDetailsController.m */; };
 		84CF673B1CE0182900A0DCBA /* GallerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF673A1CE0182900A0DCBA /* GallerViewController.m */; };
@@ -188,6 +192,10 @@
 		84A7C6CB1CE1C6820056BE57 /* 农红底部-按下状态@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "农红底部-按下状态@3x.png"; sourceTree = "<group>"; };
 		84A7C6CE1CE1C6910056BE57 /* 更多@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多@2x.png"; sourceTree = "<group>"; };
 		84A7C6CF1CE1C6910056BE57 /* 更多@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "更多@3x.png"; sourceTree = "<group>"; };
+		84B652AF1CE35E3A00A33194 /* 关注框@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关注框@2x.png"; sourceTree = "<group>"; };
+		84B652B01CE35E3A00A33194 /* 关注框@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关注框@3x.png"; sourceTree = "<group>"; };
+		84B652B11CE35E3A00A33194 /* 农红秀场@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "农红秀场@2x.png"; sourceTree = "<group>"; };
+		84B652B21CE35E3A00A33194 /* 农红秀场@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "农红秀场@3x.png"; sourceTree = "<group>"; };
 		84C7480A1C8E71E3004B49CA /* UISTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISTableViewController.h; sourceTree = "<group>"; };
 		84C7480B1C8E71E3004B49CA /* UISTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISTableViewController.m; sourceTree = "<group>"; };
 		84CCF2591C844D7000B2DDB0 /* TouTiaoDetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouTiaoDetailsController.h; sourceTree = "<group>"; };
@@ -344,6 +352,10 @@
 		8460536D1C7D8FE100308B49 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				84B652AF1CE35E3A00A33194 /* 关注框@2x.png */,
+				84B652B01CE35E3A00A33194 /* 关注框@3x.png */,
+				84B652B11CE35E3A00A33194 /* 农红秀场@2x.png */,
+				84B652B21CE35E3A00A33194 /* 农红秀场@3x.png */,
 				84A7C6CE1CE1C6910056BE57 /* 更多@2x.png */,
 				84A7C6CF1CE1C6910056BE57 /* 更多@3x.png */,
 				84A7C6CA1CE1C6820056BE57 /* 农红底部-按下状态@2x.png */,
@@ -779,10 +791,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B652B51CE35E3A00A33194 /* 农红秀场@2x.png in Resources */,
+				84B652B61CE35E3A00A33194 /* 农红秀场@3x.png in Resources */,
 				8460535B1C7D593800308B49 /* usersList.plist in Resources */,
 				8479CAE61C7046FC00BD1C6F /* LaunchScreen.storyboard in Resources */,
 				849196781C8001E60038BA6E /* normal.jpg in Resources */,
 				84E904C61C882E3F00B42926 /* new_share_tabbar_normal.png in Resources */,
+				84B652B31CE35E3A00A33194 /* 关注框@2x.png in Resources */,
 				8479CAE31C7046FC00BD1C6F /* Assets.xcassets in Resources */,
 				84D94B371C9028E600CCC3DD /* UISwitchViewController.xib in Resources */,
 				84D94B481C9036F400CCC3DD /* ProgressViewController.xib in Resources */,
@@ -791,6 +806,7 @@
 				846053681C7D7E9A00308B49 /* LoginViewController.xib in Resources */,
 				84E904C01C881E3300B42926 /* UMS_shared@2x.png in Resources */,
 				84A7C6CC1CE1C6820056BE57 /* 农红底部-按下状态@2x.png in Resources */,
+				84B652B41CE35E3A00A33194 /* 关注框@3x.png in Resources */,
 				846053631C7D7E7900308B49 /* ShareViewController.xib in Resources */,
 				84A7C6CD1CE1C6820056BE57 /* 农红底部-按下状态@3x.png in Resources */,
 				8449EAD61C71D4F800396D34 /* My.storyboard in Resources */,

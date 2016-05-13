@@ -23,8 +23,8 @@
 //点击这个item 返回Item的Model 与返回ItemView同时执行
 -(void)onClickItemForModel:(NHAttentionModel*)model;
 
-//点击关注按钮返回对应tag
--(void)onClickOfAttentionTag:(NSInteger)tag;
+//点击关注按钮返回对应字典
+-(void)onClickOfAttentionOtherData:(NSDictionary*)otherData;
 
 @end
 
@@ -40,7 +40,7 @@
 
 -(void)execute;
 
-@property(nonatomic,strong) NSMutableArray* tags;
+@property(nonatomic,strong) NSMutableArray<NSString*>* tags;
 
 @property(nonatomic,strong) NSMutableArray<NHAttentionModel*>* data;
 

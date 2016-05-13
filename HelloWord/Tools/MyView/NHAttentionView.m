@@ -29,6 +29,8 @@
 
 @implementation NHAttentionView
 
+@synthesize tags,data;
+
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         _selfW = self.frame.size.width;
@@ -47,7 +49,7 @@
     CGFloat itemW = self.contentView.frame.size.width;
     for (NSString* tag in self.tags) {
         NSInteger i = [tag integerValue];
-        CGRect frame = CGRectMake((i-1<0?0:i-1)*itemW/self.tags.count, 0, itemW/self.tags.count-2.5, ItmeH);
+        CGRect frame = CGRectMake((i-1)*itemW/self.tags.count, 0, itemW/self.tags.count-2.5, ItmeH);
         itemView = [self MakeItemViewWithFrame:frame tag:i];
         [self.contentView addSubview:itemView];
     }
@@ -70,19 +72,24 @@
 }
 
 -(NHAttentionItemView*)MakeItemViewWithFrame:(CGRect)frame tag:(NSInteger)tag{
-    NHAttentionItemView* itemView     = [[NHAttentionItemView alloc] initWithFrame:frame];
-    itemView.tag                      = tag;
-    itemView.deletage                 = self;
-    NHAttentionModel* model           = [self.data objectAtIndex:tag-1<0?0:tag-1];
-    itemView.title                    = model.title;
-    itemView.detailTitle              = model.detailTitle;
-    itemView.image                    = model.image;
-    itemView.buttonBackgroundImage    = model.button;
-    itemView.buttonTitle              = model.buttonTitle;
-    itemView.buttonTitleColor         = model.buttonTitleColor;
-    itemView.userInteractionEnabled   = YES;
-    UITapGestureRecognizer* singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonPress:)];
-    [itemView addGestureRecognizer:singleTap];
+    NHAttentionItemView* itemView = nil;
+    if ([self viewWithTag:tag]) {
+        itemView                          = (NHAttentionItemView*)[self viewWithTag:tag];
+    }else{
+        itemView                          = [[NHAttentionItemView alloc] initWithFrame:frame];
+        itemView.deletage                 = self;
+        itemView.tag                      = tag;
+        itemView.userInteractionEnabled   = YES;
+        UITapGestureRecognizer* singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonPress:)];
+        [itemView addGestureRecognizer:singleTap];
+    }
+    NHAttentionModel* model        = [self.data objectAtIndex:tag-1];
+    itemView.title                 = model.title;
+    itemView.detailTitle           = model.detailTitle;
+    itemView.image                 = model.image;
+    itemView.buttonBackgroundImage = model.button;
+    itemView.buttonTitle           = model.buttonTitle;
+    itemView.buttonTitleColor      = model.buttonTitleColor;
     return itemView;
 }
 
@@ -92,8 +99,9 @@
 }
 
 -(void)didAttion:(UIButton*)button{
-    if (self.deletage != nil && [self.deletage respondsToSelector:@selector(onClickOfAttentionTag:)]) {
-        [self.deletage onClickOfAttentionTag:button.tag];
+    if (self.deletage != nil && [self.deletage respondsToSelector:@selector(onClickOfAttentionOtherData:)]) {
+        NHAttentionModel* model = self.data[button.tag-1];
+        [self.deletage onClickOfAttentionOtherData:model.otherData];
     }
 }
 
@@ -101,7 +109,7 @@
     NHAttentionItemView* itemView = (NHAttentionItemView*)singleTap.view;
     if (self.deletage != nil && [self.deletage respondsToSelector:@selector(onClickOfItem:)]) {
         [self.deletage onClickOfItem:itemView];
-        [self.deletage onClickItemForModel:self.data[itemView.tag-1<0?0:itemView.tag-1]];
+        [self.deletage onClickItemForModel:self.data[itemView.tag-1]];
     }
 }
 
@@ -118,18 +126,30 @@
     }
 }
 
--(NSMutableArray *)tags{
-    if (_tags == nil) {
-        _tags = [NSMutableArray array];
+-(void)setTags:(NSMutableArray<NSString*> *)aTags{
+    if([aTags[0] integerValue] < 1){
+        NSException* ex = [[NSException alloc] initWithName:@"HNAttentionView" reason:@"(腾飞)tags数据从@\"1\"自然顺序开始" userInfo:nil];
+        @throw (ex);
     }
-    return _tags;
+    tags = [aTags copy];
+}
+
+-(NSMutableArray<NSString*> *)tags{
+    if (tags == nil) {
+        tags = [NSMutableArray array];
+    }
+    return tags;
+}
+
+-(void)setData:(NSMutableArray<NHAttentionModel *> *)aData{
+    data = [aData copy];
 }
 
 -(NSMutableArray<NHAttentionModel *> *)data{
-    if (_data == nil) {
-        _data = [NSMutableArray array];
+    if (data == nil) {
+        data = [NSMutableArray array];
     }
-    return _data;
+    return data;
 }
 
 -(UIButton *)titleButton{
@@ -167,6 +187,13 @@
 //        _contentView.center = CGPointMake(self.selfW/2, self.center.y);
     }
     return _contentView;
+}
+
+-(UIView*)CuttingLineWithY:(CGFloat)y{
+    CGRect frame = CGRectMake(0, y, self.frame.size.width, 10);
+    UIView* cuttingLine = [[UIView alloc] initWithFrame:frame];
+    cuttingLine.dk_backgroundColorPicker = DKColorWithRGB(0xEDF1F4, 0x000000);
+    return cuttingLine;
 }
 
 @end

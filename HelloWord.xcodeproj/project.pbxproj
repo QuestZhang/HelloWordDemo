@@ -16,6 +16,8 @@
 		8429D0321CD2049400055A46 /* UIView+position.m in Sources */ = {isa = PBXBuildFile; fileRef = 8429D0311CD2049400055A46 /* UIView+position.m */; };
 		8429D0361CD204D300055A46 /* UIColor+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8429D0351CD204D300055A46 /* UIColor+extension.m */; };
 		842E7C711C72C86100661515 /* CalcController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E7C701C72C86100661515 /* CalcController.m */; };
+		843707131CE4450F00D6AD85 /* RecommendNHView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843707121CE4450F00D6AD85 /* RecommendNHView.m */; };
+		843707161CE459E700D6AD85 /* NHAttentionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 843707151CE459E700D6AD85 /* NHAttentionViewCell.m */; };
 		8449EAD61C71D4F800396D34 /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8449EAD51C71D4F800396D34 /* My.storyboard */; };
 		8460535B1C7D593800308B49 /* usersList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8460535A1C7D593800308B49 /* usersList.plist */; };
 		8460535E1C7D7C8600308B49 /* MyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8460535D1C7D7C8600308B49 /* MyTabBarController.m */; };
@@ -123,6 +125,10 @@
 		8429D0351CD204D300055A46 /* UIColor+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+extension.m"; sourceTree = "<group>"; };
 		842E7C6F1C72C86100661515 /* CalcController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcController.h; sourceTree = "<group>"; };
 		842E7C701C72C86100661515 /* CalcController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcController.m; sourceTree = "<group>"; };
+		843707111CE4450F00D6AD85 /* RecommendNHView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendNHView.h; sourceTree = "<group>"; };
+		843707121CE4450F00D6AD85 /* RecommendNHView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendNHView.m; sourceTree = "<group>"; };
+		843707141CE459E700D6AD85 /* NHAttentionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHAttentionViewCell.h; sourceTree = "<group>"; };
+		843707151CE459E700D6AD85 /* NHAttentionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHAttentionViewCell.m; sourceTree = "<group>"; };
 		8449EAD51C71D4F800396D34 /* My.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
 		8460535A1C7D593800308B49 /* usersList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = usersList.plist; sourceTree = "<group>"; };
 		8460535C1C7D7C8600308B49 /* MyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarController.h; sourceTree = "<group>"; };
@@ -315,6 +321,7 @@
 		8429D02E1CD2047A00055A46 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				843707101CE444B800D6AD85 /* MyView2 */,
 				84A7C6B81CE16E570056BE57 /* MyView */,
 				8429D0331CD204D300055A46 /* Color */,
 				8429D02F1CD2048A00055A46 /* Plug */,
@@ -347,6 +354,15 @@
 				842E7C701C72C86100661515 /* CalcController.m */,
 			);
 			path = UICalc;
+			sourceTree = "<group>";
+		};
+		843707101CE444B800D6AD85 /* MyView2 */ = {
+			isa = PBXGroup;
+			children = (
+				843707111CE4450F00D6AD85 /* RecommendNHView.h */,
+				843707121CE4450F00D6AD85 /* RecommendNHView.m */,
+			);
+			path = MyView2;
 			sourceTree = "<group>";
 		};
 		8460536D1C7D8FE100308B49 /* Image */ = {
@@ -539,6 +555,8 @@
 				84A7C6BD1CE16F110056BE57 /* NHAttentionItemView.m */,
 				84A7C6BF1CE1A32A0056BE57 /* NHAttentionModel.h */,
 				84A7C6C01CE1A32A0056BE57 /* NHAttentionModel.m */,
+				843707141CE459E700D6AD85 /* NHAttentionViewCell.h */,
+				843707151CE459E700D6AD85 /* NHAttentionViewCell.m */,
 			);
 			path = MyView;
 			sourceTree = "<group>";
@@ -906,10 +924,12 @@
 				84D94B471C9036F400CCC3DD /* ProgressViewController.m in Sources */,
 				84A7C6BE1CE16F110056BE57 /* NHAttentionItemView.m in Sources */,
 				84A7C6C11CE1A32A0056BE57 /* NHAttentionModel.m in Sources */,
+				843707161CE459E700D6AD85 /* NHAttentionViewCell.m in Sources */,
 				8479CADB1C7046FC00BD1C6F /* AppDelegate.m in Sources */,
 				84CCF25C1C844D7000B2DDB0 /* TouTiaoDetailsController.m in Sources */,
 				84E904C91C883CE400B42926 /* DetialTabView.m in Sources */,
 				84A7C6AF1CE09C120056BE57 /* CollectionViewController.m in Sources */,
+				843707131CE4450F00D6AD85 /* RecommendNHView.m in Sources */,
 				84A7C6C51CE1C1AD0056BE57 /* MYViewController.m in Sources */,
 				840F784F1C8A7A1C0015E97D /* CGRectViewController.m in Sources */,
 				84A7C6A91CE0621B0056BE57 /* ImageCell.m in Sources */,

@@ -8,11 +8,11 @@
 
 #import "MYViewController.h"
 #import "NHAttentionView.h"
+#import "RecommendNHView.h"
 
-@interface MYViewController ()<NHAttentionViewDeletage>
+@interface MYViewController ()<NHAttentionViewDeletage,UITableViewDelegate>
 
-@property(nonatomic,strong) NSMutableArray* tags;
-
+@property(nonatomic,strong) NSMutableArray<NSString*>* tags;
 @property(nonatomic,strong) NSMutableArray<NHAttentionModel*>* data;
 
 @property(nonatomic,strong) NHAttentionModel* model_0;
@@ -20,6 +20,11 @@
 @property(nonatomic,strong) NHAttentionModel* model_2;
 
 @property(nonatomic,strong) NHAttentionView* attentionView;
+
+@property(nonatomic,strong) UIButton* reflush;
+
+//================MyView2============
+@property(nonatomic,strong) RecommendNHView* recommendView;
 
 @end
 
@@ -32,7 +37,8 @@
     [self.attentionView setTitle:@"农红广场" image:@"农红秀场"];
     [self.attentionView setMoreTitle:@"更多" moreImage:@"更多"];
     [self.attentionView execute];
-    [self.view addSubview:self.attentionView];
+    //[self.view addSubview:self.attentionView];
+    //[self.view addSubview:self.reflush];
     
 //    CGFloat width = [UIScreen mainScreen].bounds.size.width;
 //    NHAttentionItemView* itemView = [[NHAttentionItemView alloc] initWithFrame:CGRectMake(0, 0, width/3, 200)];
@@ -41,8 +47,35 @@
 //    itemView.detailTitle = model.detailTitle;
 //    itemView.image = model.image;
 //    itemView.buttonBackgroundImage = model.button;
-    //[self.view addSubview:itemView];
+//    [self.view addSubview:itemView];
+    
+//    [self.view addSubview:self.recommendView];
+//    [self.recommendView setTitle:@"推荐农红"];
+//    [self.recommendView setNickname:@"最炫芒果"];
+//    [self.recommendView setNicknameDescription:@"芒果达人  石榴专家"];
+//    [self.recommendView setRecommendReason:@"牛人引领最专业的品鉴"];
+//    [self.recommendView setAttentonBackgroundImage:@"关注框" title:@"关注"];
+//    UIView* view = [[UIView alloc] init];
+//    view.backgroundColor = [UIColor redColor];
+//    [self.recommendView addSubviewOfContentView:view];
+//    [self.recommendView setOnClickHandler:^{
+//        NSLog(@"点击了关注");
+//    }];
 }
+
+//===============MyView2==================
+
+-(RecommendNHView *)recommendView{
+    if (_recommendView == nil) {
+        CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, 268);
+        _recommendView = [[RecommendNHView alloc] initWithFrame:frame];
+    }
+    return _recommendView;
+}
+
+
+
+//=============MyView===============
 
 //更多按钮点击事件
 -(void)onClickOfMore:(UIButton*)moreButton{
@@ -59,14 +92,33 @@
     NSLog(@"%@",model.description);
 }
 
-//点击关注按钮返回对应tag
--(void)onClickOfAttentionTag:(NSInteger)tag{
-    NSLog(@"onClickOfAttentionTag%ld",tag);
+//点击关注按钮返回对应字典
+-(void)onClickOfAttentionOtherData:(NSDictionary*)otherData{
+    NSLog(@"%@",otherData.description);
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
+}
+
+-(void)reflushUI:(UIButton*)button{
+    [self.data removeAllObjects];
+    if (button.tag == 0) {
+        button.tag = 1;
+        [self.data addObject:self.model_1];
+        [self.data addObject:self.model_0];
+        [self.data addObject:self.model_2];
+        self.attentionView.tags = self.tags;
+        self.attentionView.data = self.data;
+    }else{
+        button.tag = 0;
+        [self.data addObject:self.model_1];
+        [self.data addObject:self.model_2];
+        [self.data addObject:self.model_0];
+        self.attentionView.tags = self.tags;
+        self.attentionView.data = self.data;
+    }
+    [self.attentionView execute];
 }
 
 -(NSMutableArray *)tags{
@@ -98,6 +150,7 @@
         _model_0.button  = @"关注框";
         _model_0.buttonTitle = @"关注";
         _model_0.buttonTitleColor = 0xE22222;
+        _model_0.otherData = @{@"zhang":@"1"};
     }
     return _model_0;
 }
@@ -111,6 +164,7 @@
         _model_1.button  = @"关注框";
         _model_1.buttonTitle = @"关注";
         _model_1.buttonTitleColor = 0xE22222;
+        _model_1.otherData = @{@"zhang":@"2"};
     }
     return _model_1;
 }
@@ -124,6 +178,7 @@
         _model_2.button  = @"关注框";
         _model_2.buttonTitle = @"关注";
         _model_2.buttonTitleColor = 0xE22222;
+        _model_2.otherData = @{@"zhang":@"3"};
     }
     return _model_2;
 }
@@ -136,6 +191,18 @@
         _attentionView.deletage = self;
     }
     return _attentionView;
+}
+
+-(UIButton *)reflush{
+    if (_reflush == nil) {
+        _reflush = [UIButton buttonWithType:UIButtonTypeCustom];
+        _reflush.frame = CGRectMake(0, CGRectGetMaxY(self.attentionView.frame)+40, self.view.frame.size.width, 30);
+        [_reflush setTitle:@"刷新UI" forState:UIControlStateNormal];
+        [_reflush setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+        [_reflush addTarget:self action:@selector(reflushUI:) forControlEvents:UIControlEventTouchUpInside];
+        _reflush.tag = 0;
+    }
+    return _reflush;
 }
 
 /*

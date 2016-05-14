@@ -20,6 +20,7 @@
 #import "GalleryViewController.h"
 #import "CollectionViewController.h"
 #import "MYViewController.h"
+#import "MYTwoViewController.h"
 
 @interface MyTabBarController ()
 
@@ -83,13 +84,18 @@
     [myview setTitle:@"myview"];
     [myview.tabBarItem setImage:[UIImage imageNamed:@"UMS_account"]];
     
+    
+    MYTwoViewController* myTwoview = [[MYTwoViewController alloc] init];
+    [myTwoview setTitle:@"myTowview"];
+    [myTwoview.tabBarItem setImage:[UIImage imageNamed:@"UMS_account"]];
+    
 //    [self presentViewController:uis animated:YES completion:nil];
 //    self showDetailViewController: sender:<#(nullable id)#>
     
 //    push -> popTo  presentV.. ->  dismis
     
     
-    [self setViewControllers:[NSArray arrayWithObjects:myview,toutiao,login,night,share,nil]];
+    [self setViewControllers:[NSArray arrayWithObjects:myTwoview,toutiao,login,night,share,nil]];
     [super viewDidLoad];
     
 }

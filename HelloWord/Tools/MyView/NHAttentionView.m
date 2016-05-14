@@ -5,10 +5,10 @@
 //  Created by zhangwenqiang on 16/5/10.
 //  Copyright © 2016年 zhangwenqiang. All rights reserved.
 //
-#define titleH   35.0f
+#define titleH   38.0f
 #define lineH    0.5f
 #define FontSize 15.0f
-#define ItmeH    190
+#define ItmeH    180
 
 #import "NHAttentionView.h"
 #import "DKNightVersion.h"
@@ -67,8 +67,8 @@
     [self.moreButton setImage:[UIImage imageNamed:moreImage] forState:UIControlStateNormal];
     [self.moreButton setImage:[UIImage imageNamed:moreImage] forState:UIControlStateHighlighted];
     CGFloat leftOrRight = self.moreButton.imageView.frame.size.width + self.moreButton.titleLabel.frame.size.width;
-    self.moreButton.titleEdgeInsets = UIEdgeInsetsMake(0, -leftOrRight, 0, 0);
-    self.moreButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -1.8f*leftOrRight);
+    self.moreButton.titleEdgeInsets = UIEdgeInsetsMake(0, -leftOrRight+20, 0, 0);
+    self.moreButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -leftOrRight-10);
 }
 
 -(NHAttentionItemView*)MakeItemViewWithFrame:(CGRect)frame tag:(NSInteger)tag{
@@ -172,11 +172,15 @@
         CGRect frame = CGRectMake(self.selfW-55, 0, 45, titleH);
         _moreButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _moreButton.frame = frame;
-        //_moreButton.titleEdgeInsets = UIEdgeInsetsMake(0, _moreButton.imageView.frame.size.width, 0, 0);
-        //_moreButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, _moreButton.titleLabel.frame.size.width);
         _moreButton.titleLabel.font = [UIFont systemFontOfSize:FontSize];
         [_moreButton dk_setTitleColorPicker:DKColorWithRGB(0x999999,0x000000) forState:UIControlStateNormal];
         [_moreButton addTarget:self action:@selector(didMore:) forControlEvents:UIControlEventTouchUpInside];
+        [self.moreButton setTitle:@"更多" forState:UIControlStateNormal];
+        [self.moreButton setImage:[UIImage imageNamed:@"更多"] forState:UIControlStateNormal];
+        [self.moreButton setImage:[UIImage imageNamed:@"更多"] forState:UIControlStateHighlighted];
+        CGFloat leftOrRight = self.moreButton.imageView.frame.size.width + self.moreButton.titleLabel.frame.size.width;
+        self.moreButton.titleEdgeInsets = UIEdgeInsetsMake(0, -leftOrRight+20, 0, 0);
+        self.moreButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -leftOrRight-10);
     }
     return _moreButton;
 }

@@ -37,8 +37,8 @@
     [self.attentionView setTitle:@"农红广场" image:@"农红秀场"];
     [self.attentionView setMoreTitle:@"更多" moreImage:@"更多"];
     [self.attentionView execute];
-    //[self.view addSubview:self.attentionView];
-    //[self.view addSubview:self.reflush];
+    [self.view addSubview:self.attentionView];
+    [self.view addSubview:self.reflush];
     
 //    CGFloat width = [UIScreen mainScreen].bounds.size.width;
 //    NHAttentionItemView* itemView = [[NHAttentionItemView alloc] initWithFrame:CGRectMake(0, 0, width/3, 200)];
@@ -110,11 +110,18 @@
         [self.data addObject:self.model_2];
         self.attentionView.tags = self.tags;
         self.attentionView.data = self.data;
-    }else{
-        button.tag = 0;
+    }else if(button.tag == 1){
+        button.tag = 2;
         [self.data addObject:self.model_1];
         [self.data addObject:self.model_2];
         [self.data addObject:self.model_0];
+        self.attentionView.tags = self.tags;
+        self.attentionView.data = self.data;
+    }else if (button.tag == 2){
+        button.tag = 0;
+        [self.data addObject:self.model_2];
+        [self.data addObject:self.model_0];
+        [self.data addObject:self.model_1];
         self.attentionView.tags = self.tags;
         self.attentionView.data = self.data;
     }

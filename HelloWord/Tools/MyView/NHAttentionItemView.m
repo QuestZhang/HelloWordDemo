@@ -106,7 +106,7 @@
     }else{
         [self.attention setBackgroundImage:[UIImage imageNamed:@"默认图片"] forState:UIControlStateNormal];
     }
-    if (self.deletage != nil) {
+    if (self.deletage != nil && [self.deletage respondsToSelector:@selector(didAttention:tag:)]) {
         [self.deletage didAttention:self.attention tag:self.tag];
     }
 }
@@ -158,7 +158,7 @@
 
 -(UIButton *)attention{
     if (_attention == nil) {
-        CGRect frame = CGRectMake(0, CGRectGetMaxY(self.imageView.frame)+15, self.selfW/2, self.selfW/4);
+        CGRect frame = CGRectMake(0, CGRectGetMaxY(self.imageView.frame)+15, self.selfW/2, self.selfW/5);
         _attention = [UIButton buttonWithType:UIButtonTypeCustom];
         _attention.frame = frame;
         _attention.center = CGPointMake(self.selfW/2, _attention.center.y);

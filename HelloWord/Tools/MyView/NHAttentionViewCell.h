@@ -11,6 +11,11 @@
 
 @interface NHAttentionViewCell : UITableViewCell
 
+@property(nonatomic,weak) id<NHAttentionViewDeletage> deletage;
+
+@property(nonatomic,strong) NSMutableArray<NSString*>* tags;
+@property(nonatomic,strong) NSMutableArray<NHAttentionModel*>* data;
+
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end

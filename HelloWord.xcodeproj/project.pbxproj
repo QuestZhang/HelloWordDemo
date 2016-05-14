@@ -18,6 +18,7 @@
 		842E7C711C72C86100661515 /* CalcController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842E7C701C72C86100661515 /* CalcController.m */; };
 		843707131CE4450F00D6AD85 /* RecommendNHView.m in Sources */ = {isa = PBXBuildFile; fileRef = 843707121CE4450F00D6AD85 /* RecommendNHView.m */; };
 		843707161CE459E700D6AD85 /* NHAttentionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 843707151CE459E700D6AD85 /* NHAttentionViewCell.m */; };
+		843707251CE5CEAC00D6AD85 /* MYTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843707241CE5CEAC00D6AD85 /* MYTwoViewController.m */; };
 		8449EAD61C71D4F800396D34 /* My.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8449EAD51C71D4F800396D34 /* My.storyboard */; };
 		8460535B1C7D593800308B49 /* usersList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8460535A1C7D593800308B49 /* usersList.plist */; };
 		8460535E1C7D7C8600308B49 /* MyTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8460535D1C7D7C8600308B49 /* MyTabBarController.m */; };
@@ -129,6 +130,8 @@
 		843707121CE4450F00D6AD85 /* RecommendNHView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendNHView.m; sourceTree = "<group>"; };
 		843707141CE459E700D6AD85 /* NHAttentionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHAttentionViewCell.h; sourceTree = "<group>"; };
 		843707151CE459E700D6AD85 /* NHAttentionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHAttentionViewCell.m; sourceTree = "<group>"; };
+		843707231CE5CEAC00D6AD85 /* MYTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYTwoViewController.h; sourceTree = "<group>"; };
+		843707241CE5CEAC00D6AD85 /* MYTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYTwoViewController.m; sourceTree = "<group>"; };
 		8449EAD51C71D4F800396D34 /* My.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = My.storyboard; sourceTree = "<group>"; };
 		8460535A1C7D593800308B49 /* usersList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = usersList.plist; sourceTree = "<group>"; };
 		8460535C1C7D7C8600308B49 /* MyTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarController.h; sourceTree = "<group>"; };
@@ -566,6 +569,8 @@
 			children = (
 				84A7C6C31CE1C1AD0056BE57 /* MYViewController.h */,
 				84A7C6C41CE1C1AD0056BE57 /* MYViewController.m */,
+				843707231CE5CEAC00D6AD85 /* MYTwoViewController.h */,
+				843707241CE5CEAC00D6AD85 /* MYTwoViewController.m */,
 			);
 			path = UIMyView;
 			sourceTree = "<group>";
@@ -934,6 +939,7 @@
 				840F784F1C8A7A1C0015E97D /* CGRectViewController.m in Sources */,
 				84A7C6A91CE0621B0056BE57 /* ImageCell.m in Sources */,
 				84A7C6A01CE05C730056BE57 /* LineLayout.m in Sources */,
+				843707251CE5CEAC00D6AD85 /* MYTwoViewController.m in Sources */,
 				8460535E1C7D7C8600308B49 /* MyTabBarController.m in Sources */,
 				84D94B411C9035E900CCC3DD /* UIViewViewController.m in Sources */,
 				848BD85C1C858FB3008D3641 /* BottomView.m in Sources */,

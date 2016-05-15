@@ -82,7 +82,7 @@
 }
 
 -(void)didAttention:(UIButton*)button{
-    if (self.onClickHandler != nil) {
+    if (self.onClickHandler != nil && [self respondsToSelector:@selector(onClickHandler)]) {
         self.onClickHandler();
     }
 }
@@ -140,7 +140,7 @@
 
 -(UIButton *)attentionButton{
     if (_attentionButton == nil) {
-        CGRect frame = CGRectMake(0, CGRectGetMaxY(self.recommendReasonLabel.frame)+20, 75, 25);
+        CGRect frame = CGRectMake(0, CGRectGetMaxY(self.recommendReasonLabel.frame)+20, 160/2, 55/2);
         _attentionButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _attentionButton.frame = frame;
         _attentionButton.center = CGPointMake(self.frame.size.width/2, _attentionButton.center.y);

@@ -38,7 +38,7 @@
     [self.attentionView setMoreTitle:@"更多" moreImage:@"更多"];
     [self.attentionView execute];
     [self.view addSubview:self.attentionView];
-    [self.view addSubview:self.reflush];
+    //[self.view addSubview:self.reflush];
     
 //    CGFloat width = [UIScreen mainScreen].bounds.size.width;
 //    NHAttentionItemView* itemView = [[NHAttentionItemView alloc] initWithFrame:CGRectMake(0, 0, width/3, 200)];
@@ -50,17 +50,17 @@
 //    [self.view addSubview:itemView];
     
 //    [self.view addSubview:self.recommendView];
-//    [self.recommendView setTitle:@"推荐农红"];
-//    [self.recommendView setNickname:@"最炫芒果"];
-//    [self.recommendView setNicknameDescription:@"芒果达人  石榴专家"];
-//    [self.recommendView setRecommendReason:@"牛人引领最专业的品鉴"];
-//    [self.recommendView setAttentonBackgroundImage:@"关注框" title:@"关注"];
-//    UIView* view = [[UIView alloc] init];
-//    view.backgroundColor = [UIColor redColor];
-//    [self.recommendView addSubviewOfContentView:view];
-//    [self.recommendView setOnClickHandler:^{
-//        NSLog(@"点击了关注");
-//    }];
+    [self.recommendView setTitle:@"推荐农红"];
+    [self.recommendView setNickname:@"最炫芒果"];
+    [self.recommendView setNicknameDescription:@"芒果达人  石榴专家"];
+    [self.recommendView setRecommendReason:@"牛人引领最专业的品鉴"];
+    [self.recommendView setAttentonBackgroundImage:@"关注框" title:@"关注"];
+    UIView* view = [[UIView alloc] init];
+    view.backgroundColor = [UIColor redColor];
+    [self.recommendView addSubviewOfContentView:view];
+    [self.recommendView setOnClickHandler:^{
+        NSLog(@"点击了关注");
+    }];
 }
 
 //===============MyView2==================

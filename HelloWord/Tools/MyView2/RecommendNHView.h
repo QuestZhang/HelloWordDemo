@@ -22,7 +22,7 @@ typedef void (^OnClickHandler)(void);
 
 @property(nonatomic,strong) NSString* recommendReason;
 
-@property(nonatomic,weak) OnClickHandler onClickHandler;
+@property(nonatomic,copy) OnClickHandler onClickHandler;
 
 -(void)setAttentonBackgroundImage:(NSString*)image title:(NSString*)title;
 

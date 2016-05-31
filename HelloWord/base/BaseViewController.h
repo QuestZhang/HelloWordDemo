@@ -11,4 +11,7 @@
 
 @interface BaseViewController : UIViewController
 
+@property(nonatomic,assign) CGFloat width;
+@property(nonatomic,assign) CGFloat height;
+
 @end

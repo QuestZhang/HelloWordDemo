@@ -25,6 +25,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(CGFloat)width{
+    if (_width == 0) {
+        _width = [UIScreen mainScreen].bounds.size.width;
+    }
+    return _width;
+}
+
+-(CGFloat)height{
+    if (_height == 0) {
+        _height = [UIScreen mainScreen].bounds.size.height;
+    }
+    return _height;
+}
+
 /*
 #pragma mark - Navigation
 

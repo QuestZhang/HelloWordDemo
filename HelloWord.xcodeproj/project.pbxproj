@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		840F784F1C8A7A1C0015E97D /* CGRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840F784E1C8A7A1C0015E97D /* CGRectViewController.m */; };
+		8416C2291CFD6840002969A0 /* NSArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8416C2281CFD6840002969A0 /* NSArrayViewController.m */; };
+		8416C22B1CFD79C7002969A0 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8416C22A1CFD79C7002969A0 /* libc++abi.tbd */; };
 		841A29811C802C83000BB7DB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A29801C802C83000BB7DB /* Security.framework */; };
 		841A29831C802CAC000BB7DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A29821C802CAC000BB7DB /* SystemConfiguration.framework */; };
 		841A29851C802CBA000BB7DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841A29841C802CBA000BB7DB /* CoreGraphics.framework */; };
@@ -112,6 +114,9 @@
 		5F81A28979AA075F8D12ABEB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		840F784D1C8A7A1C0015E97D /* CGRectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGRectViewController.h; sourceTree = "<group>"; };
 		840F784E1C8A7A1C0015E97D /* CGRectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGRectViewController.m; sourceTree = "<group>"; };
+		8416C2271CFD6840002969A0 /* NSArrayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayViewController.h; sourceTree = "<group>"; };
+		8416C2281CFD6840002969A0 /* NSArrayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayViewController.m; sourceTree = "<group>"; };
+		8416C22A1CFD79C7002969A0 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
 		841A29801C802C83000BB7DB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		841A29821C802CAC000BB7DB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		841A29841C802CBA000BB7DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -247,6 +252,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8416C22B1CFD79C7002969A0 /* libc++abi.tbd in Frameworks */,
 				841A29871C802CDB000BB7DB /* CoreTelephony.framework in Frameworks */,
 				841A29851C802CBA000BB7DB /* CoreGraphics.framework in Frameworks */,
 				841A29831C802CAC000BB7DB /* SystemConfiguration.framework in Frameworks */,
@@ -284,6 +290,7 @@
 		7ADB10DE7950343706064756 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8416C22A1CFD79C7002969A0 /* libc++abi.tbd */,
 				841A29861C802CDB000BB7DB /* CoreTelephony.framework */,
 				841A29841C802CBA000BB7DB /* CoreGraphics.framework */,
 				841A29821C802CAC000BB7DB /* SystemConfiguration.framework */,
@@ -300,6 +307,23 @@
 				840F784E1C8A7A1C0015E97D /* CGRectViewController.m */,
 			);
 			path = CGRect;
+			sourceTree = "<group>";
+		};
+		8416C2251CFD67D2002969A0 /* OCCode */ = {
+			isa = PBXGroup;
+			children = (
+				8416C2261CFD67D2002969A0 /* NSArrayDemo */,
+			);
+			path = OCCode;
+			sourceTree = "<group>";
+		};
+		8416C2261CFD67D2002969A0 /* NSArrayDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8416C2271CFD6840002969A0 /* NSArrayViewController.h */,
+				8416C2281CFD6840002969A0 /* NSArrayViewController.m */,
+			);
+			path = NSArrayDemo;
 			sourceTree = "<group>";
 		};
 		8429D0271CD2005000055A46 /* base */ = {
@@ -427,6 +451,7 @@
 		8479CAD51C7046FC00BD1C6F /* HelloWord */ = {
 			isa = PBXGroup;
 			children = (
+				8416C2251CFD67D2002969A0 /* OCCode */,
 				8429D02E1CD2047A00055A46 /* Tools */,
 				8429D0271CD2005000055A46 /* base */,
 				84D94B0F1C8FC58300CCC3DD /* UIViewDemos */,
@@ -960,6 +985,7 @@
 				8429D0321CD2049400055A46 /* UIView+position.m in Sources */,
 				84D94B2F1C8FEBEC00CCC3DD /* UIText.m in Sources */,
 				848F80BB1C87194500418C69 /* SocialGroupView.m in Sources */,
+				8416C2291CFD6840002969A0 /* NSArrayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1111,7 +1137,7 @@
 					"$(PROJECT_DIR)/UMSocial_Sdk_Extra_Frameworks/Twitter",
 				);
 				INFOPLIST_FILE = HelloWord/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1156,7 +1182,7 @@
 					"$(PROJECT_DIR)/UMSocial_Sdk_Extra_Frameworks/Twitter",
 				);
 				INFOPLIST_FILE = HelloWord/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

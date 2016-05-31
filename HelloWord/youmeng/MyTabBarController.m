@@ -21,6 +21,7 @@
 #import "CollectionViewController.h"
 #import "MYViewController.h"
 #import "MYTwoViewController.h"
+#import "NSArrayViewController.h"
 
 @interface MyTabBarController ()
 
@@ -89,13 +90,18 @@
     [myTwoview setTitle:@"myTowview"];
     [myTwoview.tabBarItem setImage:[UIImage imageNamed:@"UMS_account"]];
     
+//    NSArrayViewController
+    NSArrayViewController* nsArray = [[NSArrayViewController alloc] init];
+    [nsArray setTitle:@"NSArray的方法"];
+    [nsArray.tabBarItem setImage:[UIImage imageNamed:@"UMS_account"]];
+    
 //    [self presentViewController:uis animated:YES completion:nil];
 //    self showDetailViewController: sender:<#(nullable id)#>
     
 //    push -> popTo  presentV.. ->  dismis
     
     
-    [self setViewControllers:[NSArray arrayWithObjects:galleryView,toutiao,login,night,share,nil]];
+    [self setViewControllers:[NSArray arrayWithObjects:nsArray,toutiao,login,night,share,nil]];
     [super viewDidLoad];
     
 }

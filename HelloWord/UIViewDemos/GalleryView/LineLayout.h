@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LineLayoutDeletage <UICollectionViewDelegateFlowLayout>
+
+-(void)reloadData;
+
+@end
+
 @interface LineLayout : UICollectionViewFlowLayout
+
+@property(nonatomic,strong) id<LineLayoutDeletage> deletage;
 
 @end

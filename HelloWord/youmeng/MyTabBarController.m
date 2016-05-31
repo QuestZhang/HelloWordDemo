@@ -95,7 +95,7 @@
 //    push -> popTo  presentV.. ->  dismis
     
     
-    [self setViewControllers:[NSArray arrayWithObjects:myTwoview,toutiao,login,night,share,nil]];
+    [self setViewControllers:[NSArray arrayWithObjects:galleryView,toutiao,login,night,share,nil]];
     [super viewDidLoad];
     
 }
@@ -107,8 +107,8 @@
    
 }
 
--(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    
     for (UIViewController *viewController in self.viewControllers) {
         [viewController willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
     }

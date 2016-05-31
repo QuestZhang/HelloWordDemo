@@ -20,13 +20,13 @@
     self.imageView.layer.borderWidth = 0;
     self.imageView.layer.borderColor = [UIColor whiteColor].CGColor;
     self.imageView.clipsToBounds = YES;
-    self.imageView.layer.cornerRadius = self.cornerRadius;
-    self.imageView.frame = CGRectMake(0, 0, self.cornerRadius*2, self.cornerRadius*2);
+    self.imageView.layer.cornerRadius = 50;
+    self.imageView.frame = CGRectMake(0, 0, 50, 50);
     self.imageView.center = self.center;
+    [self.imageView.layer masksToBounds];
 }
 
 - (void)setImage:(NSString *)image{
-    
     _image = [image copy];
     
     if ([image hasPrefix:@"http://"] || [image hasPrefix:@"https://"]) {
@@ -45,7 +45,7 @@
     if (_cornerRadius != 0) {
         return _cornerRadius;
     }
-    return 25;
+    return 50;
 }
 
 @end

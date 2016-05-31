@@ -29,7 +29,7 @@
     [UMSocialData setAppKey:UMengAppKey];
     
     //打开调试log的开关
-    [UMSocialData openLog:YES];
+    [UMSocialData openLog:NO];
     
     //设置一个window start
     

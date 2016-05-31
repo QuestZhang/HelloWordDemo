@@ -60,9 +60,25 @@ static NSString *const ID = @"image";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     ImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:ID forIndexPath:indexPath];
+    [cell sizeToFit];
+    if (!cell) {
+        NSLog(@"无法创建CollectionViewCell时打印，自定义的cell就不可能进来了。");
+    }
     cell.image = self.images[indexPath.item];
     return cell;
 }
+
+#pragma mark --UICollectionViewDelegateFlowLayout
+//定义每个UICollectionView 的大小
+//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(LineLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+//    if (indexPath.row == 0) {
+//        return CGSizeMake(100, 100);
+//    }else if(indexPath.row == 1){
+//        return CGSizeMake(100, 100);
+//    }else{
+//        return CGSizeMake(50, 50);
+//    }
+//}
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     // 删除模型数据
@@ -80,12 +96,12 @@ static NSString *const ID = @"image";
 
 -(UICollectionView*)collectionView{
     if (_collectionView == nil) {
-        CGRect frame = CGRectMake(0, 0, self.width, 120);
+        CGRect frame = CGRectMake(0, 0, self.width, 100);
         _collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:[[LineLayout alloc] init]];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
         [_collectionView registerNib:[UINib nibWithNibName:@"ImageCell" bundle:nil] forCellWithReuseIdentifier:ID];
-        _collectionView.backgroundColor = [UIColor blackColor];
+        _collectionView.backgroundColor = [UIColor redColor];
         _collectionView.showsHorizontalScrollIndicator = NO;
     }
     return _collectionView;
@@ -93,6 +109,10 @@ static NSString *const ID = @"image";
 
 -(CGFloat)width{
     return self.view.frame.size.width;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//滑动TableView的scrollView
 }
 
 @end
